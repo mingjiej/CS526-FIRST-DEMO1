@@ -22,11 +22,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="HMN-fy-hxF" kind="show" identifier="return" id="Xys-ja-OJG"/>
+                        <segue destination="wuK-n7-XMd" kind="show" identifier="monsterDead" id="TE7-4Z-DlL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmi-Zq-cKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-564.5" y="411.5"/>
+            <point key="canvasLocation" x="233.5" y="2077.5"/>
         </scene>
         <!--Start Game View Controller-->
         <scene sceneID="rRA-x7-9GW">
@@ -48,7 +49,7 @@
                                     <segue destination="Jr9-7Y-pOD" kind="show" id="zJW-DN-69K"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-5m-baK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-5m-baK">
                                 <rect key="frame" x="86" y="440" width="198" height="151"/>
                                 <animations/>
                                 <state key="normal" title="Button" image="shop.png"/>
@@ -148,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNI-pg-Uzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932.5" y="1373.5"/>
+            <point key="canvasLocation" x="678.5" y="1139.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gfM-1g-TlG">
@@ -375,8 +376,8 @@
         <image name="sliver.png" width="201" height="147"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Ffi-Uo-z9f"/>
+        <segue reference="TE7-4Z-DlL"/>
         <segue reference="Xys-ja-OJG"/>
-        <segue reference="kQ3-wE-JNw"/>
-        <segue reference="JFn-wZ-Zej"/>
     </inferredMetricsTieBreakers>
 </document>

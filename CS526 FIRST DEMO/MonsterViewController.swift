@@ -9,41 +9,31 @@
 import UIKit
 import SpriteKit
 class MonsterViewController: UIViewController {
-    var totalscore = String()
-    var index = Int(0)
     override func viewDidLoad() {
         super.viewDidLoad()
         let scene = MonsterGameScene(size: CGSize(width: 750, height: 1134))// Configure the view.
-        scene.viewcontroller = self
         let skView = self.view as! SKView
         //        skView.showsFPS = true
         //        skView.showsNodeCount = true
         skView.ignoresSiblingOrder = true
         scene.scaleMode = .AspectFill
         skView.presentScene(scene)
+        // Do any additional setup after loading the view.
     }
+
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
     
-    func test(score: String, mode: Int) {
-        totalscore = score
-        index = mode
-        performSegueWithIdentifier("monsterDead", sender: nil)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "monsterDead") {
-            let svc: GameOverViewController = segue.destinationViewController as! GameOverViewController
-            svc.toPass = totalscore
-            svc.modeIndex = index
-        }
+    func back() {
+        performSegueWithIdentifier("return", sender: nil)
     }
-    // move to setting view
-    @IBAction func toMenu(sender: UIButton) {
-        let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("settingView") as! SettingView
-        self.presentViewController(menuView, animated: false, completion: nil)
-    }
+    
 
     /*
     // MARK: - Navigation

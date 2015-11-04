@@ -132,7 +132,6 @@ class MonsterGameScene: SKScene {
         playBackGroundMusic("bgm_002.mp3");
     }
     override func update(currentTime: NSTimeInterval) {
-        if(gameState == .GameRunning) {
         if lastUpdateTime > 0 {
             dt = currentTime - lastUpdateTime
         } else {
@@ -148,7 +147,7 @@ class MonsterGameScene: SKScene {
                 moveSprite(charater, velocity: velocity)
             }
         }
-        //        Lifebar.size.width -= lifeLosingVelocity * CGFloat(dt)
+//        Lifebar.size.width -= lifeLosingVelocity * CGFloat(dt)
         gemFallInterval -= dt
         if(speedup) {
             fevertime -= dt
@@ -180,8 +179,8 @@ class MonsterGameScene: SKScene {
         case (.GameOver): restartGame()
         default: break
         }
-        }
     }
+    
     // record the touch begin location
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = touches.first! as UITouch
@@ -317,7 +316,7 @@ class MonsterGameScene: SKScene {
         } else if(lane == 2) {
             tempGem.position = CGPoint(x: size.width/3, y: size.height + CGFloat(tempGem.size.height))
         } else {
-            tempGem.position = CGPoint(x: size.width/3*2, y: size.height + CGFloat(tempGem.size.height))
+            tempGem.position = CGPoint(x: size.width/3, y: size.height + CGFloat(tempGem.size.height))
         }
         if (speedup) {
             let effect = SKEffectNode(fileNamed: "Fever.sks")
@@ -351,7 +350,7 @@ class MonsterGameScene: SKScene {
    
     // display the score and game over scene, then restart the game
     func restartGame(){
-        self.viewcontroller.test("\(score)", mode: 0)
+        self.viewcontroller.back()
     }
     // calculate the swipe distance and move the character
     // initialize UI

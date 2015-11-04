@@ -27,9 +27,6 @@
 		CE1EC58A1BDC50FF007573D3 /* collection-violet.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1EC5851BDC50FF007573D3 /* collection-violet.png */; };
 		CE1EC58B1BDC50FF007573D3 /* collection-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1EC5861BDC50FF007573D3 /* collection-yellow.png */; };
 		CE1EC58D1BDD4959007573D3 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EC58C1BDD4959007573D3 /* Collection.swift */; };
-		CE34925C1BEA7188009A1A1F /* skill-1-lock.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3492591BEA7188009A1A1F /* skill-1-lock.png */; };
-		CE34925D1BEA7188009A1A1F /* skill-3-lock.png in Resources */ = {isa = PBXBuildFile; fileRef = CE34925A1BEA7188009A1A1F /* skill-3-lock.png */; };
-		CE34925E1BEA7188009A1A1F /* skill-2-lock.png in Resources */ = {isa = PBXBuildFile; fileRef = CE34925B1BEA7188009A1A1F /* skill-2-lock.png */; };
 		CE591FC51BD3034D0051E479 /* BlackGem.sks in Resources */ = {isa = PBXBuildFile; fileRef = CE591FC41BD3034D0051E479 /* BlackGem.sks */; };
 		CE5B49F51BBB8A4000E4DBA4 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B49F41BBB8A4000E4DBA4 /* GameOverScene.swift */; };
 		CE9057271BDB39550027EDF1 /* collection-red.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9057261BDB39550027EDF1 /* collection-red.png */; };
@@ -207,9 +204,6 @@
 		CE1EC5851BDC50FF007573D3 /* collection-violet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collection-violet.png"; sourceTree = "<group>"; };
 		CE1EC5861BDC50FF007573D3 /* collection-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collection-yellow.png"; sourceTree = "<group>"; };
 		CE1EC58C1BDD4959007573D3 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
-		CE3492591BEA7188009A1A1F /* skill-1-lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skill-1-lock.png"; sourceTree = "<group>"; };
-		CE34925A1BEA7188009A1A1F /* skill-3-lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skill-3-lock.png"; sourceTree = "<group>"; };
-		CE34925B1BEA7188009A1A1F /* skill-2-lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skill-2-lock.png"; sourceTree = "<group>"; };
 		CE591FC41BD3034D0051E479 /* BlackGem.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BlackGem.sks; sourceTree = "<group>"; };
 		CE5B49F41BBB8A4000E4DBA4 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		CE9057261BDB39550027EDF1 /* collection-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collection-red.png"; sourceTree = "<group>"; };
@@ -552,9 +546,6 @@
 		CEF066381BA8EF1200927C86 /* image */ = {
 			isa = PBXGroup;
 			children = (
-				CE3492591BEA7188009A1A1F /* skill-1-lock.png */,
-				CE34925A1BEA7188009A1A1F /* skill-3-lock.png */,
-				CE34925B1BEA7188009A1A1F /* skill-2-lock.png */,
 				CE0154B01BE2D32200BF1711 /* monsterAttack1.png */,
 				CE0154A61BE28F1400BF1711 /* skill-3.png */,
 				CE0154A71BE28F1400BF1711 /* skill-2.png */,
@@ -695,7 +686,6 @@
 			files = (
 				CEC499FE1BD2D7AD005CAFF1 /* sound_fight_skillhit002.mp3 in Resources */,
 				CEF066231BA8EB1500927C86 /* LaunchScreen.xib in Resources */,
-				CE34925C1BEA7188009A1A1F /* skill-1-lock.png in Resources */,
 				CEC4997A1BD2D718005CAFF1 /* evolutionlv_7.png in Resources */,
 				CEC4998A1BD2D750005CAFF1 /* shop.png in Resources */,
 				CEC49A231BD2D7AD005CAFF1 /* sound_monsterdead004.mp3 in Resources */,
@@ -715,7 +705,6 @@
 				CEC49A351BD2D7AD005CAFF1 /* sound_ui004.mp3 in Resources */,
 				CE94FAA41BD343C4002C0011 /* fightground_heishita_EndPos.jpg in Resources */,
 				CEC499F61BD2D7AD005CAFF1 /* sound_fight_skill001.mp3 in Resources */,
-				CE34925D1BEA7188009A1A1F /* skill-3-lock.png in Resources */,
 				CEC0E6361BE003C200C53934 /* char-4.png in Resources */,
 				CEC49A0F1BD2D7AD005CAFF1 /* sound_fight_slash010.mp3 in Resources */,
 				CEC499741BD2D718005CAFF1 /* evolutionlv_1.png in Resources */,
@@ -842,7 +831,6 @@
 				CEC49A411BD2EC3A005CAFF1 /* backgroud_raffleanimation.jpg in Resources */,
 				CEC49A001BD2D7AD005CAFF1 /* sound_fight_skillhit004.mp3 in Resources */,
 				CEC49A1D1BD2D7AD005CAFF1 /* sound_monster003.mp3 in Resources */,
-				CE34925E1BEA7188009A1A1F /* skill-2-lock.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

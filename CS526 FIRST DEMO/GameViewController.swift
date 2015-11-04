@@ -41,12 +41,12 @@ class GameViewController: UIViewController {
         }
     }
     // move to setting view
-
-        @IBAction func toSetting(sender: UIButton) {
-        
+    @IBAction func toMenu(sender: UIButton) {
         let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("settingView") as! SettingView
         self.presentViewController(menuView, animated: false, completion: nil)
     }
-
+//    @IBAction func pause(sender: UIButton) {
+//        self.view.paused = !self.view.paused;
+//    }
 
 }

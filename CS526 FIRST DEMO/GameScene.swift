@@ -312,22 +312,10 @@ class GameScene: SKScene {
     
     // Randomly set up three color for collection set
     func SetUpCollectionColor() {
-        if(emptyCollect > 0) {
-            collectionSet.removeAll()
-        }
+        collectionSet.removeAll()
         for posit in collectSetPosition {
             collectionSet.append(chooseColor(posit))
         }
-    }
-    
-    func deleteRestCollections() {
-        var i = 0
-        while(i < 3) {
-            collectionSet[i].removeFromParent()
-            collectionSet[i] = cancelOneCollection(collectSetPosition[i])
-            i++
-        }
-        emptyCollect = 3
     }
     
     // set the gems' color and set up their moving action
@@ -481,7 +469,6 @@ class GameScene: SKScene {
             increaseScoreBy(300)
             break
         case colour.Yellow.rawValue:
-            deleteRestCollections()
             SetUpCollectionColor()
             hitWithOutMistake = 0
             emptyCollect = 0
@@ -500,7 +487,7 @@ class GameScene: SKScene {
     func helpCollection() {
         if(emptyCollect >= 1) {
             let helpedHit = 3 - emptyCollect
-            deleteRestCollections()
+            emptyCollect = 3
             hitWithOutMistake += helpedHit
         }
         else {
@@ -552,7 +539,7 @@ class GameScene: SKScene {
                 check = true;
                 collectionSet[i].removeFromParent()
                 collectionSet[i] = cancelOneCollection(collectSetPosition[i])
-//                UIlayerNode.addChild(collectionSet[i])
+                UIlayerNode.addChild(collectionSet[i])
                 emptyCollect += 1
                 hitWithOutMistake++
                 increaseScoreBy(300)

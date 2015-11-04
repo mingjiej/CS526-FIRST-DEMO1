@@ -27,11 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmi-Zq-cKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="233.5" y="2077.5"/>
-=======
-            <point key="canvasLocation" x="-692.5" y="417.5"/>
->>>>>>> origin/master
+   <point key="canvasLocation" x="-692.5" y="417.5"/>
         </scene>
         <!--Start Game View Controller-->
         <scene sceneID="rRA-x7-9GW">
@@ -163,9 +159,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNI-pg-Uzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="678.5" y="1139.5"/>
-=======
             <point key="canvasLocation" x="738.5" y="1306.5"/>
         </scene>
         <!--Setting View-->
@@ -245,7 +238,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j04-LP-SDH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="573.5" y="2071.5"/>
->>>>>>> origin/master
         </scene>
         <!--View Controller-->
         <scene sceneID="gfM-1g-TlG">
@@ -487,13 +479,8 @@
         <image name="twitter" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="Ffi-Uo-z9f"/>
         <segue reference="TE7-4Z-DlL"/>
         <segue reference="Xys-ja-OJG"/>
-=======
-        <segue reference="RfE-s3-z3X"/>
-        <segue reference="JTb-34-liC"/>
->>>>>>> origin/master
     </inferredMetricsTieBreakers>
 </document>

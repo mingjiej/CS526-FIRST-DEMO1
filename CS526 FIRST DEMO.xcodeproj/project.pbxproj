@@ -558,10 +558,14 @@
 		CEF066381BA8EF1200927C86 /* image */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 
 				CE3492591BEA7188009A1A1F /* skill-1-lock.png */,
 				CE34925A1BEA7188009A1A1F /* skill-3-lock.png */,
 				CE34925B1BEA7188009A1A1F /* skill-2-lock.png */,
+=======
+				0040DC811BE9F8AB00F5A75C /* mainpic.png */,
+>>>>>>> origin/master
 				CE0154B01BE2D32200BF1711 /* monsterAttack1.png */,
 				CE0154A61BE28F1400BF1711 /* skill-3.png */,
 				CE0154A71BE28F1400BF1711 /* skill-2.png */,

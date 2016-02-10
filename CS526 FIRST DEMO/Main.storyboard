@@ -169,28 +169,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVR-my-8QH">
-                                <rect key="frame" x="0.0" y="0.0" width="65" height="40"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                <state key="normal" title="About">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3x6-1r-tcd">
-                                <rect key="frame" x="0.0" y="0.0" width="65" height="40"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                <state key="normal" title="About">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlA-wh-tmR">
-                                <rect key="frame" x="16" y="99" width="335" height="38"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05l-QS-xji">
-                                <rect key="frame" x="16" y="137" width="108" height="40"/>
+                                <rect key="frame" x="16" y="166" width="111" height="40"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
                                 <state key="normal" title="Easy">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -200,7 +180,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bue-5k-KD3">
-                                <rect key="frame" x="243" y="137" width="108" height="40"/>
+                                <rect key="frame" x="248" y="166" width="111" height="40"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
                                 <state key="normal" title="Hard">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -210,7 +190,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYb-RY-ROI">
-                                <rect key="frame" x="129" y="137" width="109" height="40"/>
+                                <rect key="frame" x="132" y="166" width="111" height="40"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
                                 <state key="normal" title="Medium">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -231,10 +211,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMe-qV-fnN">
-                                <rect key="frame" x="16" y="174" width="335" height="3"/>
+                                <rect key="frame" x="16" y="203" width="343" height="3"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jt8-AF-DR3">
-                                        <rect key="frame" x="0.0" y="0.0" width="112" height="3"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="3"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
@@ -247,37 +227,75 @@
                                     <constraint firstItem="jt8-AF-DR3" firstAttribute="leading" secondItem="hMe-qV-fnN" secondAttribute="leading" id="yl2-DS-gpv"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRk-ke-RxN">
+                                <rect key="frame" x="16" y="169" width="339" height="50"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                                <state key="normal" title="Instruction">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLZ-Uf-rzJ">
+                                <rect key="frame" x="16" y="227" width="339" height="50"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                                <state key="normal" title="About">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rP-CK-Ngq">
+                                <rect key="frame" x="16" y="111" width="339" height="50"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                                <state key="normal" title="Difficulty">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="difficultyButton:" destination="eXp-E1-0u8" eventType="touchUpInside" id="w1X-fL-DcM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="I2i-gG-7bi" firstAttribute="top" secondItem="f6V-td-BgB" secondAttribute="bottom" constant="8" id="19c-sI-gRE"/>
+                            <constraint firstItem="kLZ-Uf-rzJ" firstAttribute="leading" secondItem="6rP-CK-Ngq" secondAttribute="leading" id="3Zr-Cx-uXV"/>
+                            <constraint firstItem="05l-QS-xji" firstAttribute="leading" secondItem="6rP-CK-Ngq" secondAttribute="leading" id="4mI-me-Z5N"/>
                             <constraint firstItem="Bue-5k-KD3" firstAttribute="leading" secondItem="xYb-RY-ROI" secondAttribute="trailing" constant="5" id="6ls-Xm-j4n"/>
-                            <constraint firstItem="05l-QS-xji" firstAttribute="leading" secondItem="tlA-wh-tmR" secondAttribute="leading" id="77l-Nd-gaP"/>
+                            <constraint firstItem="6rP-CK-Ngq" firstAttribute="leading" secondItem="943-bW-bkY" secondAttribute="leadingMargin" id="75U-TE-Tcs"/>
                             <constraint firstItem="6Ps-hv-9DE" firstAttribute="top" secondItem="f6V-td-BgB" secondAttribute="bottom" id="AQt-Xx-d8b"/>
-                            <constraint firstItem="Bue-5k-KD3" firstAttribute="top" secondItem="tlA-wh-tmR" secondAttribute="bottom" id="Eow-tl-rvw"/>
-                            <constraint firstItem="xYb-RY-ROI" firstAttribute="top" secondItem="tlA-wh-tmR" secondAttribute="bottom" id="FsP-S1-X69"/>
-                            <constraint firstItem="Bue-5k-KD3" firstAttribute="trailing" secondItem="tlA-wh-tmR" secondAttribute="trailing" id="FxW-Go-d0Q"/>
                             <constraint firstItem="xYb-RY-ROI" firstAttribute="leading" secondItem="05l-QS-xji" secondAttribute="trailing" constant="5" id="JMI-G8-1DH"/>
                             <constraint firstItem="xYb-RY-ROI" firstAttribute="width" secondItem="05l-QS-xji" secondAttribute="width" id="Jys-TD-NG2"/>
+                            <constraint firstItem="XRk-ke-RxN" firstAttribute="trailing" secondItem="6rP-CK-Ngq" secondAttribute="trailing" id="Kzc-Jp-NR1"/>
                             <constraint firstItem="xYb-RY-ROI" firstAttribute="centerX" secondItem="943-bW-bkY" secondAttribute="centerX" id="M0D-wk-iXM"/>
+                            <constraint firstItem="Bue-5k-KD3" firstAttribute="top" secondItem="05l-QS-xji" secondAttribute="top" id="NB1-c3-dFm"/>
+                            <constraint firstItem="XRk-ke-RxN" firstAttribute="leading" secondItem="6rP-CK-Ngq" secondAttribute="leading" id="Oa7-Yg-rKc"/>
                             <constraint firstItem="Bue-5k-KD3" firstAttribute="width" secondItem="05l-QS-xji" secondAttribute="width" id="P8i-Xd-Xi1"/>
                             <constraint firstItem="hMe-qV-fnN" firstAttribute="top" secondItem="xYb-RY-ROI" secondAttribute="bottom" constant="-3" id="TqP-RD-knp"/>
-                            <constraint firstItem="05l-QS-xji" firstAttribute="top" secondItem="tlA-wh-tmR" secondAttribute="bottom" id="Yor-Js-fCj"/>
+                            <constraint firstItem="kLZ-Uf-rzJ" firstAttribute="trailing" secondItem="6rP-CK-Ngq" secondAttribute="trailing" id="YzY-Ov-wVo"/>
+                            <constraint firstItem="XRk-ke-RxN" firstAttribute="leading" secondItem="943-bW-bkY" secondAttribute="leadingMargin" constant="-4" id="a8F-ML-B2g"/>
                             <constraint firstItem="6Ps-hv-9DE" firstAttribute="leading" secondItem="943-bW-bkY" secondAttribute="leadingMargin" constant="-4" id="aTf-2t-xGY"/>
                             <constraint firstItem="hMe-qV-fnN" firstAttribute="leading" secondItem="05l-QS-xji" secondAttribute="leading" id="bba-FT-OHq"/>
-                            <constraint firstItem="tlA-wh-tmR" firstAttribute="top" secondItem="I2i-gG-7bi" secondAttribute="bottom" constant="8" id="hCx-Iu-Ti7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tlA-wh-tmR" secondAttribute="trailing" constant="8" id="i3l-c7-ncD"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="tlA-wh-tmR" secondAttribute="leading" id="k8J-vv-hOZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6rP-CK-Ngq" secondAttribute="trailing" constant="4" id="etf-ZB-dvf"/>
+                            <constraint firstItem="xYb-RY-ROI" firstAttribute="top" secondItem="05l-QS-xji" secondAttribute="top" id="l0g-oj-J3W"/>
+                            <constraint firstItem="6rP-CK-Ngq" firstAttribute="top" secondItem="I2i-gG-7bi" secondAttribute="bottom" constant="20" id="l9G-YR-Njd"/>
+                            <constraint firstItem="XRk-ke-RxN" firstAttribute="top" secondItem="6rP-CK-Ngq" secondAttribute="bottom" constant="8" id="pOd-DS-CJL"/>
+                            <constraint firstItem="kLZ-Uf-rzJ" firstAttribute="top" secondItem="XRk-ke-RxN" secondAttribute="bottom" constant="8" id="roc-pc-cvM"/>
                             <constraint firstItem="hMe-qV-fnN" firstAttribute="trailing" secondItem="Bue-5k-KD3" secondAttribute="trailing" id="tul-UN-i5I"/>
+                            <constraint firstItem="05l-QS-xji" firstAttribute="top" secondItem="6rP-CK-Ngq" secondAttribute="bottom" constant="5" id="umV-ff-e24"/>
                             <constraint firstItem="I2i-gG-7bi" firstAttribute="centerX" secondItem="943-bW-bkY" secondAttribute="centerX" id="vua-bM-sgW"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="a8F-ML-B2g"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="7e3-hh-VDf"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="aboutLabel" destination="kLZ-Uf-rzJ" id="sYP-KC-KM4"/>
+                        <outlet property="difficultyLabel" destination="6rP-CK-Ngq" id="6RK-xf-IK6"/>
                         <outlet property="easyLabel" destination="05l-QS-xji" id="Lhu-3O-5Uw"/>
                         <outlet property="hardLabel" destination="Bue-5k-KD3" id="fVB-TF-dZF"/>
+                        <outlet property="instructionLabel" destination="XRk-ke-RxN" id="Nbt-ON-dqI"/>
                         <outlet property="mediumLabel" destination="xYb-RY-ROI" id="cQ8-Yy-HZG"/>
                         <outlet property="tabBar" destination="jt8-AF-DR3" id="664-L9-hLj"/>
                         <outlet property="tabBarBackground" destination="hMe-qV-fnN" id="qEJ-0b-TqK"/>
@@ -285,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j04-LP-SDH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="727.5" y="1198.5"/>
+            <point key="canvasLocation" x="770.5" y="1193.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wXL-cz-KIe">

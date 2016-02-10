@@ -12,6 +12,8 @@ import Social
 
 var count = 1
 class SettingView:UIViewController{
+
+    @IBOutlet weak var difficultyLabel: UIButton!
     @IBOutlet weak var tabBarBackground: UIView!
     @IBOutlet weak var tabBar: UIView!
     
@@ -19,8 +21,25 @@ class SettingView:UIViewController{
     @IBOutlet weak var mediumLabel: UIButton!
     @IBOutlet weak var hardLabel: UIButton!
     
+    @IBOutlet weak var instructionLabel: UIButton!
+    @IBOutlet weak var aboutLabel: UIButton!
+    
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fightground_shenmiao.jpg")!)
+        difficultyLabel.layer.borderWidth = 1
+        difficultyLabel.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        instructionLabel.layer.borderWidth = 1
+        instructionLabel.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        aboutLabel.layer.borderWidth = 1
+        aboutLabel.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        self.easyLabel.alpha = 0
+        self.mediumLabel.alpha = 0
+        self.hardLabel.alpha = 0
+        self.tabBar.alpha = 0
+        self.tabBarBackground.alpha = 0
         
         super.viewDidLoad()
     }
@@ -64,6 +83,39 @@ class SettingView:UIViewController{
     }
     @IBAction func back(sender: UIButton) {
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    @IBAction func difficultyButton(sender: UIButton) {
+        if( self.easyLabel.alpha != 1){
+        UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+            self.instructionLabel.transform = CGAffineTransformMakeTranslation(0, 50)
+            self.aboutLabel.transform = CGAffineTransformMakeTranslation(0, 50)
+            }){ (Bool) -> Void in
+                UIView.animateWithDuration(0.2, animations: { () -> Void in
+                    self.easyLabel.alpha = 1
+                    self.mediumLabel.alpha = 1
+                    self.hardLabel.alpha = 1
+                    self.tabBar.alpha = 1
+                    self.tabBarBackground.alpha = 1
+                })
+            }
+        }else{
+            UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+                self.easyLabel.alpha = 0
+                self.mediumLabel.alpha = 0
+                self.hardLabel.alpha = 0
+                self.tabBar.alpha = 0
+                self.tabBarBackground.alpha = 0
+
+                }){ (Bool) -> Void in
+                    
+                    UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+                        self.instructionLabel.transform = CGAffineTransformMakeTranslation(0, 0)
+                        self.aboutLabel.transform = CGAffineTransformMakeTranslation(0, 0)
+                        }, completion: nil)
+            }
+        }
+
     }
     
     @IBAction func goEasy(sender: UIButton) {

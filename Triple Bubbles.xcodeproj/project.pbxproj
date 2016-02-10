@@ -11,6 +11,9 @@
 		00784A491BD7603C00B54E63 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00784A481BD7603C00B54E63 /* SettingView.swift */; };
 		1FA412481BD1BA05009F9FDA /* DiamondBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA412471BD1BA05009F9FDA /* DiamondBlack.png */; };
 		1FE91D101BC2EBDD00132486 /* gem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE91D0F1BC2EBDD00132486 /* gem.swift */; };
+		86080A341C6AEB88002B879C /* golden副本.png in Resources */ = {isa = PBXBuildFile; fileRef = 86080A331C6AEB88002B879C /* golden副本.png */; };
+		86080A381C6AEE8C002B879C /* sliver.png in Resources */ = {isa = PBXBuildFile; fileRef = 86080A371C6AEE8C002B879C /* sliver.png */; };
+		86080A3A1C6AEF90002B879C /* sliver副本.png in Resources */ = {isa = PBXBuildFile; fileRef = 86080A391C6AEF90002B879C /* sliver副本.png */; };
 		CE01549F1BE27FB600BF1711 /* MonsterGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01549E1BE27FB600BF1711 /* MonsterGameScene.swift */; };
 		CE0154A11BE280D500BF1711 /* MonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0154A01BE280D500BF1711 /* MonsterViewController.swift */; };
 		CE0154A51BE2880900BF1711 /* monster-1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0154A41BE2880900BF1711 /* monster-1.png */; };
@@ -67,7 +70,6 @@
 		CEC499841BD2D737005CAFF1 /* fightground_yingyachengbao_startPos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEC499801BD2D737005CAFF1 /* fightground_yingyachengbao_startPos.jpg */; };
 		CEC499851BD2D737005CAFF1 /* fightground_yingyachengbao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEC499811BD2D737005CAFF1 /* fightground_yingyachengbao.jpg */; };
 		CEC4998A1BD2D750005CAFF1 /* shop.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC499861BD2D750005CAFF1 /* shop.png */; };
-		CEC4998B1BD2D750005CAFF1 /* sliver.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC499871BD2D750005CAFF1 /* sliver.png */; };
 		CEC4998C1BD2D750005CAFF1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC499881BD2D750005CAFF1 /* spark.png */; };
 		CEC4998D1BD2D750005CAFF1 /* UIAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC499891BD2D750005CAFF1 /* UIAtlas.png */; };
 		CEC499941BD2D797005CAFF1 /* bgm_001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEC4998E1BD2D797005CAFF1 /* bgm_001.mp3 */; };
@@ -202,6 +204,9 @@
 		00784A481BD7603C00B54E63 /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		1FA412471BD1BA05009F9FDA /* DiamondBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DiamondBlack.png; sourceTree = "<group>"; };
 		1FE91D0F1BC2EBDD00132486 /* gem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gem.swift; sourceTree = "<group>"; };
+		86080A331C6AEB88002B879C /* golden副本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "golden副本.png"; sourceTree = "<group>"; };
+		86080A371C6AEE8C002B879C /* sliver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliver.png; sourceTree = "<group>"; };
+		86080A391C6AEF90002B879C /* sliver副本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliver副本.png"; sourceTree = "<group>"; };
 		CE01549E1BE27FB600BF1711 /* MonsterGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterGameScene.swift; sourceTree = "<group>"; };
 		CE0154A01BE280D500BF1711 /* MonsterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterViewController.swift; sourceTree = "<group>"; };
 		CE0154A41BE2880900BF1711 /* monster-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monster-1.png"; sourceTree = "<group>"; };
@@ -258,7 +263,6 @@
 		CEC499801BD2D737005CAFF1 /* fightground_yingyachengbao_startPos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fightground_yingyachengbao_startPos.jpg; sourceTree = "<group>"; };
 		CEC499811BD2D737005CAFF1 /* fightground_yingyachengbao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fightground_yingyachengbao.jpg; sourceTree = "<group>"; };
 		CEC499861BD2D750005CAFF1 /* shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop.png; sourceTree = "<group>"; };
-		CEC499871BD2D750005CAFF1 /* sliver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliver.png; sourceTree = "<group>"; };
 		CEC499881BD2D750005CAFF1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		CEC499891BD2D750005CAFF1 /* UIAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIAtlas.png; sourceTree = "<group>"; };
 		CEC4998E1BD2D797005CAFF1 /* bgm_001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm_001.mp3; sourceTree = "<group>"; };
@@ -577,6 +581,7 @@
 		CEF066381BA8EF1200927C86 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				86080A391C6AEF90002B879C /* sliver副本.png */,
 				F7CB9FC91C0E703000EFDB7A /* monster-2.png */,
 				CE5710951C00F4FB009AE30C /* replay.png */,
 				CE5710961C00F4FB009AE30C /* BackToMain.png */,
@@ -609,9 +614,9 @@
 				CE94FAA11BD343A0002C0011 /* listbase_1.jpg */,
 				CEC49A401BD2EC3A005CAFF1 /* backgroud_raffleanimation.jpg */,
 				CEC499861BD2D750005CAFF1 /* shop.png */,
-				CEC499871BD2D750005CAFF1 /* sliver.png */,
 				CEC499881BD2D750005CAFF1 /* spark.png */,
 				CEC499891BD2D750005CAFF1 /* UIAtlas.png */,
+				86080A371C6AEE8C002B879C /* sliver.png */,
 				CEC4997E1BD2D737005CAFF1 /* fightground_heishita_startPos.jpg */,
 				CEC4997F1BD2D737005CAFF1 /* fightground_heishita.jpg */,
 				CEC499801BD2D737005CAFF1 /* fightground_yingyachengbao_startPos.jpg */,
@@ -640,6 +645,7 @@
 				CECE75901BBE456700B2911C /* DiamondGreen.png */,
 				CECE75911BBE456700B2911C /* DiamondRed.png */,
 				CECE75921BBE456700B2911C /* DiamondViolet.png */,
+				86080A331C6AEB88002B879C /* golden副本.png */,
 				CEF0663D1BA8F27600927C86 /* testbackground.png */,
 			);
 			name = image;
@@ -746,6 +752,7 @@
 				CEC499EC1BD2D7AD005CAFF1 /* sound_022.mp3 in Resources */,
 				CEC49A181BD2D7AD005CAFF1 /* sound_fight_throw002.mp3 in Resources */,
 				CEC49A351BD2D7AD005CAFF1 /* sound_ui004.mp3 in Resources */,
+				86080A341C6AEB88002B879C /* golden副本.png in Resources */,
 				CE94FAA41BD343C4002C0011 /* fightground_heishita_EndPos.jpg in Resources */,
 				CEC499F61BD2D7AD005CAFF1 /* sound_fight_skill001.mp3 in Resources */,
 				F7CB9FCA1C0E703000EFDB7A /* monster-2.png in Resources */,
@@ -754,7 +761,6 @@
 				CEC49A0F1BD2D7AD005CAFF1 /* sound_fight_slash010.mp3 in Resources */,
 				CEC499741BD2D718005CAFF1 /* evolutionlv_1.png in Resources */,
 				CE5710971C00F4FB009AE30C /* replay.png in Resources */,
-				CEC4998B1BD2D750005CAFF1 /* sliver.png in Resources */,
 				CEC499771BD2D718005CAFF1 /* evolutionlv_4.png in Resources */,
 				CEC6D5811BAA6E0C00F9DA7F /* DiamondBlue.png in Resources */,
 				CEC49A2F1BD2D7AD005CAFF1 /* sound_part014.mp3 in Resources */,
@@ -777,6 +783,7 @@
 				CEC49A271BD2D7AD005CAFF1 /* sound_part003.mp3 in Resources */,
 				CEC49A0E1BD2D7AD005CAFF1 /* sound_fight_slash009.mp3 in Resources */,
 				CEC499791BD2D718005CAFF1 /* evolutionlv_6.png in Resources */,
+				86080A381C6AEE8C002B879C /* sliver.png in Resources */,
 				CEC49A021BD2D7AD005CAFF1 /* sound_fight_skillhit006.mp3 in Resources */,
 				CEC499951BD2D797005CAFF1 /* bgm_002.mp3 in Resources */,
 				CEC499F81BD2D7AD005CAFF1 /* sound_fight_skill003.mp3 in Resources */,
@@ -833,6 +840,7 @@
 				CED1E5191BFE8BBA00E38E05 /* skill-3-lock.png in Resources */,
 				CEC499F41BD2D7AD005CAFF1 /* sound_dig005.mp3 in Resources */,
 				CE0154AD1BE2A04600BF1711 /* skill-1-eff.png in Resources */,
+				86080A3A1C6AEF90002B879C /* sliver副本.png in Resources */,
 				CEC499941BD2D797005CAFF1 /* bgm_001.mp3 in Resources */,
 				CED1E5201BFE8DCF00E38E05 /* falseOption.png in Resources */,
 				CEC4997B1BD2D718005CAFF1 /* evolutionlv_8.png in Resources */,

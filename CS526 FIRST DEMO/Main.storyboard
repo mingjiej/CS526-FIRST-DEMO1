@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Monster View Controller-->
@@ -58,41 +57,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KD-MX-HHU">
-                                <rect key="frame" x="59" y="341" width="202" height="147"/>
-                                <state key="normal" image="sliver.png"/>
-                                <connections>
-                                    <segue destination="23v-36-VfL" kind="show" id="Qg8-WK-5c4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIN-XR-HDT">
-                                <rect key="frame" x="63" y="100" width="194" height="162"/>
-                                <state key="normal" title="Button" image="golden.png"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIN-XR-HDT">
+                                <rect key="frame" x="59" y="100" width="203" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="fqP-2X-J1Q"/>
+                                </constraints>
+                                <state key="normal" image="golden副本.png"/>
                                 <connections>
                                     <segue destination="BV1-FR-VrT" kind="show" id="kQ3-wE-JNw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0H-0n-de1">
+                                <rect key="frame" x="59" y="323" width="203" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="0y3-9G-2U6"/>
+                                </constraints>
+                                <state key="normal" image="sliver副本.png"/>
+                                <connections>
+                                    <segue destination="23v-36-VfL" kind="show" id="fML-he-QW2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="RIN-XR-HDT" secondAttribute="trailing" constant="43" id="4UG-88-sdE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7KD-MX-HHU" secondAttribute="trailing" constant="39" id="B9G-7D-agV"/>
-                            <constraint firstItem="nAp-H4-6WY" firstAttribute="top" secondItem="RIN-XR-HDT" secondAttribute="bottom" constant="306" id="Ckc-2i-fL3"/>
+                            <constraint firstItem="h0H-0n-de1" firstAttribute="width" secondItem="RIN-XR-HDT" secondAttribute="width" id="9nJ-VC-Y6P"/>
                             <constraint firstItem="RIN-XR-HDT" firstAttribute="top" secondItem="7eR-Oj-NTQ" secondAttribute="bottom" constant="36" id="JC2-fx-KBC"/>
-                            <constraint firstItem="nAp-H4-6WY" firstAttribute="top" secondItem="7KD-MX-HHU" secondAttribute="bottom" constant="80" id="MoR-06-s0S"/>
+                            <constraint firstItem="h0H-0n-de1" firstAttribute="top" secondItem="RIN-XR-HDT" secondAttribute="bottom" constant="61" id="Jsp-zd-zM1"/>
                             <constraint firstItem="RIN-XR-HDT" firstAttribute="centerX" secondItem="gKV-Lf-ccu" secondAttribute="centerX" id="SXe-Lv-Azx"/>
-                            <constraint firstItem="RIN-XR-HDT" firstAttribute="leading" secondItem="gKV-Lf-ccu" secondAttribute="leadingMargin" constant="43" id="Wcm-nd-Reg"/>
-                            <constraint firstItem="7KD-MX-HHU" firstAttribute="centerY" secondItem="gKV-Lf-ccu" secondAttribute="centerY" id="aDC-yA-MGE"/>
-                            <constraint firstItem="7KD-MX-HHU" firstAttribute="top" secondItem="7eR-Oj-NTQ" secondAttribute="bottom" constant="277" id="irh-6d-mmw"/>
-                            <constraint firstItem="7KD-MX-HHU" firstAttribute="centerY" secondItem="gKV-Lf-ccu" secondAttribute="centerY" id="q0n-8h-HxZ"/>
-                            <constraint firstItem="7KD-MX-HHU" firstAttribute="leading" secondItem="gKV-Lf-ccu" secondAttribute="leadingMargin" constant="39" id="yfs-Yl-fWW"/>
+                            <constraint firstItem="h0H-0n-de1" firstAttribute="centerX" secondItem="gKV-Lf-ccu" secondAttribute="centerX" id="bk4-gF-bfo"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="aDC-yA-MGE"/>
-                                <exclude reference="q0n-8h-HxZ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="8BL-C3-qKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -241,10 +234,10 @@
     <resources>
         <image name="close" width="64" height="64"/>
         <image name="facebook" width="64" height="64"/>
-        <image name="golden.png" width="203" height="154"/>
+        <image name="golden副本.png" width="203" height="154"/>
         <image name="google+" width="64" height="64"/>
         <image name="instagram" width="64" height="64"/>
-        <image name="sliver.png" width="201" height="147"/>
+        <image name="sliver副本.png" width="201" height="147"/>
         <image name="twitter" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>

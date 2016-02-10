@@ -54,16 +54,12 @@ class GameOverScene: SKScene {
         let touch = touches.first! as UITouch
         let touchLocation = touch.locationInNode(contentNode)
         if(backButtom.containsPoint(touchLocation)){
-//            if #available(iOS 8.0, *) {
-//                self.beforeViewController.navigationController?.popoverPresentationController
-//            } else {
-//                // Fallback on earlier versions
-//            }
             self.viewcontroller.dismissViewControllerAnimated(false, completion: nil)
             self.beforeViewController.navigationController?.popToRootViewControllerAnimated(true)
             
-//        } else if (replayButton.containsPoint(touchLocation)) {
-            
+        }else if (reGameButton.containsPoint(touchLocation)){
+            self.viewcontroller.dismissViewControllerAnimated(false, completion: nil)
+            self.beforeViewController.loadGame()
         }
     }
     

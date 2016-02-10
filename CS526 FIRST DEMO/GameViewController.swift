@@ -14,26 +14,28 @@ class GameViewController: UIViewController {
     var index = Int(0)
     override func viewDidLoad() {
         super.viewDidLoad()
-        let scene = GameScene(size: CGSize(width: 750, height: 1134) , gvcontroller: self)// Configure the view.
-        scene.viewcontroller = self
-        let skView = self.view as! SKView
-//        skView.showsFPS = true
-//        skView.showsNodeCount = true
-        skView.ignoresSiblingOrder = true
-        scene.scaleMode = .AspectFill
-        skView.presentScene(scene)
-        
+        loadGame()        
     }
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-    override func viewWillDisappear(animated: Bool) {
+    override func viewDidDisappear(animated: Bool) {
         let skView = self.view as! SKView
         skView.presentScene(nil)
 
     }
     
-
+    func loadGame(){
+        let scene = GameScene(size: CGSize(width: 750, height: 1134) , gvcontroller: self)// Configure the view.
+        scene.viewcontroller = self
+        let skView = self.view as! SKView
+        //        skView.showsFPS = true
+        //        skView.showsNodeCount = true
+        skView.ignoresSiblingOrder = true
+        scene.scaleMode = .AspectFill
+        skView.presentScene(scene)
+    }
+    
     func test(score: String, mode: Int) {
 //        self.view.removeFromSuperview()
         totalscore = score

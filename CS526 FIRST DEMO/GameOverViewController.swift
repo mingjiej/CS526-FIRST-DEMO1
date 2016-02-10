@@ -56,7 +56,7 @@ class GameOverViewController: UIViewController {
         
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewDidDisappear(animated: Bool) {
         let skView = self.view as! SKView
 
         skView.presentScene(nil)

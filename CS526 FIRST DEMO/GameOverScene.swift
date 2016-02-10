@@ -10,7 +10,10 @@ import Foundation
 import SpriteKit
 
 class GameOverScene: SKScene {
+    var beforeViewController : GameViewController!
+    var viewcontroller : GameOverViewController!
     let score : String
+    let highest_score :String
     let Mode: Int
     let backgroundbottom1 = SKSpriteNode(imageNamed: "fightground_heishita.jpg")
     let backgroundtop1 = SKSpriteNode(imageNamed: "fightground_heishita_EndPos.jpg")
@@ -21,8 +24,18 @@ class GameOverScene: SKScene {
     var playableRect = CGRect()
     let resultLable = SKLabelNode()
     let gameOverLabel = SKLabelNode()
-    init(size: CGSize, Score: String, Number: Int){
+    var HighestScore = SKLabelNode()
+//    let replayButton = SKSpriteNode(imageNamed: "replay.png")
+    let backButtom = SKSpriteNode(imageNamed: "BackToMain.png")
+    let reGameButton = SKSpriteNode(imageNamed: "replay.png")
+    
+    let contentNode = SKNode()
+    let scoreLabel = SKLabelNode()
+    let highestLabel = SKLabelNode()
+    init(size: CGSize, Score: String, Number: Int, HighScore: String){
+        //self.HighestScore.text = HighScore
         self.score = Score
+        highest_score = HighScore
         self.Mode = Number
         maxAspectRatio = 16.0/9.0 // iPhone 5"
         maxAspectRatioWidth = size.height / maxAspectRatio
@@ -36,6 +49,24 @@ class GameOverScene: SKScene {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let touch = touches.first! as UITouch
+        let touchLocation = touch.locationInNode(contentNode)
+        if(backButtom.containsPoint(touchLocation)){
+//            if #available(iOS 8.0, *) {
+//                self.beforeViewController.navigationController?.popoverPresentationController
+//            } else {
+//                // Fallback on earlier versions
+//            }
+            self.viewcontroller.dismissViewControllerAnimated(false, completion: nil)
+            self.beforeViewController.navigationController?.popToRootViewControllerAnimated(true)
+            
+//        } else if (replayButton.containsPoint(touchLocation)) {
+            
+        }
+    }
+    
     override func didMoveToView(view: SKView) {
         backgroundColor = UIColor.grayColor()
         self.addChild(backgroundbottom1)
@@ -51,21 +82,64 @@ class GameOverScene: SKScene {
         endboard.zPosition = 10
         gameOverLabel.name = "gameOverLabel"
         gameOverLabel.fontSize = 70
+        gameOverLabel.fontName = "Noteworthy-Bold"
         gameOverLabel.fontColor = SKColor.blackColor()
         gameOverLabel.horizontalAlignmentMode = .Center
         gameOverLabel.verticalAlignmentMode = .Center
-        gameOverLabel.position = CGPointMake(size.width / 2, size.height / 2 + 50)
+        gameOverLabel.position = CGPointMake(size.width / 2, size.height / 2 + 300)
         gameOverLabel.zPosition = 60
         gameOverLabel.text = "GAME OVER"
         resultLable.name = "resultLable"
-        resultLable.text = "You score is "+score
+        resultLable.text = "You score is: "
         resultLable.fontSize = 70
+        resultLable.fontName = "Noteworthy-Bold"
         resultLable.zPosition = 60
         resultLable.fontColor = SKColor.blackColor()
         resultLable.horizontalAlignmentMode = .Center
         resultLable.verticalAlignmentMode = .Center
-        resultLable.position = CGPointMake(size.width / 2, size.height / 2 - 50)
+        resultLable.position = CGPointMake(size.width / 2, size.height / 2 + 200)
+        scoreLabel.name = "resultLable"
+        scoreLabel.text = "" + score
+        scoreLabel.fontSize = 70
+        scoreLabel.fontName = "Noteworthy-Bold"
+        scoreLabel.zPosition = 60
+        scoreLabel.fontColor = SKColor.blackColor()
+        scoreLabel.horizontalAlignmentMode = .Center
+        scoreLabel.verticalAlignmentMode = .Center
+        scoreLabel.position = CGPointMake(size.width / 2, size.height / 2 + 100)
+        highestLabel.name = "resultLable"
+        highestLabel.text = "Best score: "
+        highestLabel.fontSize = 70
+        highestLabel.fontName = "Noteworthy-Bold"
+        highestLabel.zPosition = 60
+        highestLabel.fontColor = SKColor.blackColor()
+        highestLabel.horizontalAlignmentMode = .Center
+        highestLabel.verticalAlignmentMode = .Center
+        highestLabel.position = CGPointMake(size.width / 2, size.height / 2 )
+        HighestScore.name = "resultLable"
+        HighestScore.text = highest_score
+        HighestScore.fontSize = 70
+        HighestScore.fontName = "Noteworthy-Bold"
+        HighestScore.zPosition = 60
+        HighestScore.fontColor = SKColor.blackColor()
+        HighestScore.horizontalAlignmentMode = .Center
+        HighestScore.verticalAlignmentMode = .Center
+        HighestScore.position = CGPointMake(size.width / 2, size.height / 2 - 100)
+//        replayButton.zPosition = 60
+//        replayButton.position = CGPointMake(size.width / 2 - 100 , size.height / 2 - 300)
+//        contentNode.addChild(replayButton)
+        backButtom.zPosition = 60
+        backButtom.position = CGPointMake(size.width / 2 + 100, size.height / 2 - 300)
+        reGameButton.zPosition = 60
+        reGameButton.position = CGPointMake(size.width / 2 - 100, size.height / 2 - 300)
+        
+        contentNode.addChild(backButtom)
+        contentNode.addChild(reGameButton)
+        self.addChild(contentNode)
         self.addChild(gameOverLabel)
         self.addChild(resultLable)
+        self.addChild(scoreLabel)
+        self.addChild(HighestScore)
+        self.addChild(highestLabel)
     }
 }

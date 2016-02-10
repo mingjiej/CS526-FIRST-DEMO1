@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
     var index = Int(0)
     override func viewDidLoad() {
         super.viewDidLoad()
-        let scene = GameScene(size: CGSize(width: 750, height: 1134))// Configure the view.
+        let scene = GameScene(size: CGSize(width: 750, height: 1134) , gvcontroller: self)// Configure the view.
         scene.viewcontroller = self
         let skView = self.view as! SKView
 //        skView.showsFPS = true
@@ -22,31 +22,41 @@ class GameViewController: UIViewController {
         skView.ignoresSiblingOrder = true
         scene.scaleMode = .AspectFill
         skView.presentScene(scene)
+        
     }
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    override func viewWillDisappear(animated: Bool) {
+        let skView = self.view as! SKView
+        skView.presentScene(nil)
+
+    }
+    
 
     func test(score: String, mode: Int) {
+//        self.view.removeFromSuperview()
         totalscore = score
         index = mode
         performSegueWithIdentifier("test", sender: nil)
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "test") {
             let svc: GameOverViewController = segue.destinationViewController as! GameOverViewController
+            svc.beforeViewController = self
             svc.toPass = totalscore
             svc.modeIndex = index
         }
     }
     // move to setting view
-    @IBAction func toMenu(sender: UIButton) {
-        let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("settingView") as! SettingView
-        self.presentViewController(menuView, animated: false, completion: nil)
-    }
-//    @IBAction func pause(sender: UIButton) {
-//        self.view.paused = !self.view.paused;
+
+//        @IBAction func toSetting(sender: UIButton) {
+//        
+//        let menuView = self.storyboard?.instantiateViewControllerWithIdentifier("settingView") as! SettingView
+//        self.presentViewController(menuView, animated: false, completion: nil)
 //    }
+
 
 }

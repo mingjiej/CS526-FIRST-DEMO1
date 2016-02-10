@@ -12,7 +12,7 @@ import SpriteKit
 
 class GameScene: SKScene {
     
-    var viewcontroller = GameViewController()
+    var viewcontroller : GameViewController
     
     var testCollection = SKSpriteNode(imageNamed: "collection-red.png")
     
@@ -42,7 +42,7 @@ class GameScene: SKScene {
     var velocity = CGPointZero
     let UIlayerNode = SKNode()
     let CollectionLayerNode = SKNode()
-    var scoreLabel = SKLabelNode(fontNamed: "Arial")
+    var scoreLabel = SKLabelNode(fontNamed: "Noteworthy-Bold")
     var feverSecond = SKLabelNode(fontNamed: "Arial")
     let UIbackgroundHeight: CGFloat = 90
     let collectionBackgroundHeight: CGFloat = 30
@@ -50,6 +50,7 @@ class GameScene: SKScene {
     var LifeLosing = SKAction()
     var LifebarSize = CGFloat(0)
     var gameState = GameState.GameRunning;
+    var normalGameLength = 5
     
     var maxAspectRatio = CGFloat()
     var playableMargin = CGFloat()
@@ -96,9 +97,10 @@ class GameScene: SKScene {
     let gemCollsionSound: SKAction = SKAction.playSoundFileNamed("sound_ui001.mp3", waitForCompletion: false)
     let collectionSound: SKAction = SKAction.playSoundFileNamed("sound_fight_skill005.mp3", waitForCompletion: false)
     
-    let pauseButton = SKSpriteNode(imageNamed: "pause.png")
+    let pauseButton = SKSpriteNode(imageNamed: "Return.png")
     
-    override init(size: CGSize) {
+    init(size: CGSize , gvcontroller: GameViewController ) {
+        self.viewcontroller = gvcontroller
         var texture : [SKTexture] = []
         texture.append(SKTexture(imageNamed: "char-7.png"))
         texture.append(SKTexture(imageNamed: "char-3.png"))
@@ -280,7 +282,7 @@ class GameScene: SKScene {
         topbar.zPosition = 300
         
         chararterLayerNode.addChild(charater)
-        scoreLabel.fontColor = UIColor.blackColor();
+        scoreLabel.fontColor = UIColor.whiteColor();
         scoreLabel.text = "Score: 0 "
         scoreLabel.name = "scoreLabel"
         
@@ -288,7 +290,7 @@ class GameScene: SKScene {
         scoreLabel.fontSize = 50
         scoreLabel.zPosition = 320
         scoreLabel.verticalAlignmentMode = .Center
-        scoreLabel.position = CGPoint(x: size.width/2, y: size.height - scoreLabel.frame.height-10)
+        scoreLabel.position = CGPoint(x: size.width/2, y: size.height - scoreLabel.frame.height)
         UIlayerNode.addChild(scoreLabel)
         Lifebar.zPosition = 320
         LifebarSize = size.width - playableMargin*2;
@@ -296,7 +298,7 @@ class GameScene: SKScene {
         Lifebar.anchorPoint = CGPointZero
         Lifebar.position = CGPoint(x: playableMargin, y: size.height - UIbackgroundHeight)
         Lifebar.color = UIColor.greenColor()
-        lifeLosingVelocity = Lifebar.size.width / 30
+        lifeLosingVelocity = Lifebar.size.width / CGFloat(normalGameLength)
         UIlayerNode.addChild(Lifebar)
     }
     
@@ -312,10 +314,22 @@ class GameScene: SKScene {
     
     // Randomly set up three color for collection set
     func SetUpCollectionColor() {
-        collectionSet.removeAll()
+        if(emptyCollect > 0) {
+            collectionSet.removeAll()
+        }
         for posit in collectSetPosition {
             collectionSet.append(chooseColor(posit))
         }
+    }
+    
+    func deleteRestCollections() {
+        var i = 0
+        while(i < 3) {
+            collectionSet[i].removeFromParent()
+            collectionSet[i] = cancelOneCollection(collectSetPosition[i])
+            i++
+        }
+        emptyCollect = 3
     }
     
     // set the gems' color and set up their moving action
@@ -469,6 +483,7 @@ class GameScene: SKScene {
             increaseScoreBy(300)
             break
         case colour.Yellow.rawValue:
+            deleteRestCollections()
             SetUpCollectionColor()
             hitWithOutMistake = 0
             emptyCollect = 0
@@ -487,7 +502,7 @@ class GameScene: SKScene {
     func helpCollection() {
         if(emptyCollect >= 1) {
             let helpedHit = 3 - emptyCollect
-            emptyCollect = 3
+            deleteRestCollections()
             hitWithOutMistake += helpedHit
         }
         else {
@@ -539,7 +554,7 @@ class GameScene: SKScene {
                 check = true;
                 collectionSet[i].removeFromParent()
                 collectionSet[i] = cancelOneCollection(collectSetPosition[i])
-                UIlayerNode.addChild(collectionSet[i])
+//                UIlayerNode.addChild(collectionSet[i])
                 emptyCollect += 1
                 hitWithOutMistake++
                 increaseScoreBy(300)
@@ -582,9 +597,10 @@ class GameScene: SKScene {
     
     // increase the score by a given value
     func increaseScoreBy(plus: Int){
+        //fontNamed: "Helvetica-light"
         let scoreincrease = SKLabelNode()
         scoreincrease.text = String(plus)
-        scoreincrease.fontSize = 70;
+        scoreincrease.fontSize = 50;
         scoreincrease.zPosition = 100;
         scoreincrease.position = charater.position
         UIlayerNode.addChild(scoreincrease)
@@ -594,6 +610,7 @@ class GameScene: SKScene {
     }
      // display the score and game over scene, then restart the game
     func restartGame(){
+        backgroundMusicPlayer.stop()
         self.viewcontroller.test("\(score)",mode: 1)
     }
     func chooseColor(posit: CGPoint) -> Collection {

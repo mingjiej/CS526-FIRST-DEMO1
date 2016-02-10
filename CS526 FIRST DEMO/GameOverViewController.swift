@@ -10,14 +10,43 @@ import UIKit
 import SpriteKit
 
 class GameOverViewController: UIViewController {
+    
+    var beforeViewController : GameViewController!
+    
     @IBOutlet weak var score: UILabel!
     var toPass: String = ""
     var modeIndex = Int(0)
+    var highScore : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let scene = GameOverScene(size: CGSize(width: 750, height: 1134), Score: toPass, Number: modeIndex)// Configure the view.
-//        scene.viewcontroller = self
+//        NSUserDefaults.standardUserDefaults().setObject("0", forKey: "Highest")
+        var target = ""
+//        NSUserDefaults.standardUserDefaults().setObject("100000000000", forKey: "ShortestTime")
+        if(modeIndex == 3) {
+            if (NSUserDefaults.standardUserDefaults().objectForKey("ShortestTime") != nil &&  Double(toPass) <= Double(NSUserDefaults.standardUserDefaults().objectForKey("ShortestTime") as! String)) {
+                NSUserDefaults.standardUserDefaults().setObject(toPass, forKey: "ShortestTime")
+                target = toPass
+            }else if NSUserDefaults.standardUserDefaults().objectForKey("ShortestTime") == nil{
+                target = toPass
+                NSUserDefaults.standardUserDefaults().setObject(toPass, forKey: "ShortestTime")}
+            else {
+                target = NSUserDefaults.standardUserDefaults().objectForKey("ShortestTime") as! String
+            }
+        } else {
+            if (NSUserDefaults.standardUserDefaults().objectForKey("Highest") != nil && Int(toPass) >= Int(NSUserDefaults.standardUserDefaults().objectForKey("Highest") as! String)) {
+                NSUserDefaults.standardUserDefaults().setObject(toPass, forKey: "Highest")
+                target = toPass
+            } else if NSUserDefaults.standardUserDefaults().objectForKey("Highest") == nil{
+                target = toPass
+                NSUserDefaults.standardUserDefaults().setObject(toPass, forKey: "Highest")
+            }else{
+                target = NSUserDefaults.standardUserDefaults().objectForKey("Highest") as! String
+            }
+        }
+        let scene = GameOverScene(size: CGSize(width: 750, height: 1134), Score: toPass, Number: modeIndex, HighScore: target)// Configure the view.
+        scene.beforeViewController = beforeViewController
+        scene.viewcontroller = self
         let skView = self.view as! SKView
         //        skView.showsFPS = true
         //        skView.showsNodeCount = true
@@ -25,7 +54,13 @@ class GameOverViewController: UIViewController {
         scene.scaleMode = .AspectFill
         skView.presentScene(scene)
         
-    }    
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        let skView = self.view as! SKView
+
+        skView.presentScene(nil)
+    }
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

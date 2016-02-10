@@ -9,14 +9,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CS526 FIRST DEMO/MyUtils.swift"
-            timestampString = "465329254.022555"
+            filePath = "CS526 FIRST DEMO/GameScene.swift"
+            timestampString = "468136388.317369"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "randomInRange(_:)"
-            landmarkType = "7">
+            startingLineNumber = "324"
+            endingLineNumber = "324"
+            landmarkName = "deleteRestCollections()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

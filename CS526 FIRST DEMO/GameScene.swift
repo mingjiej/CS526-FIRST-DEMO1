@@ -97,7 +97,7 @@ class GameScene: SKScene {
     let gemCollsionSound: SKAction = SKAction.playSoundFileNamed("sound_ui001.mp3", waitForCompletion: false)
     let collectionSound: SKAction = SKAction.playSoundFileNamed("sound_fight_skill005.mp3", waitForCompletion: false)
     
-    let pauseButton = SKSpriteNode(imageNamed: "Return.png")
+    let pauseButton = SKSpriteNode(imageNamed: "Pause.png")
     
     init(size: CGSize , gvcontroller: GameViewController ) {
         self.viewcontroller = gvcontroller
@@ -266,6 +266,7 @@ class GameScene: SKScene {
         UIlayerNode.addChild(pauseButton)
         pauseButton.zPosition = 100
         pauseButton.position = CGPoint(x: size.width/2, y: 50)
+        pauseButton.size = CGSizeMake(80,80)
         
         charater.position = CGPoint(x: size.width/2, y: 1/5*size.height)
         charater.zPosition = 20

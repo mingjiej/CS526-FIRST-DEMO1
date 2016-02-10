@@ -12,7 +12,7 @@ import SpriteKit
 class GameOverViewController: UIViewController {
     
     var beforeViewController : GameViewController!
-    
+    var beforeViewControllerB : MonsterViewController!
     @IBOutlet weak var score: UILabel!
     var toPass: String = ""
     var modeIndex = Int(0)
@@ -46,6 +46,7 @@ class GameOverViewController: UIViewController {
         }
         let scene = GameOverScene(size: CGSize(width: 750, height: 1134), Score: toPass, Number: modeIndex, HighScore: target)// Configure the view.
         scene.beforeViewController = beforeViewController
+        scene.beforeViewControllerB = beforeViewControllerB
         scene.viewcontroller = self
         let skView = self.view as! SKView
         //        skView.showsFPS = true

@@ -10,7 +10,9 @@ import Foundation
 import SpriteKit
 
 class GameOverScene: SKScene {
-    var beforeViewController : GameViewController!
+    var beforeViewController : GameViewController? = nil
+    var beforeViewControllerB : MonsterViewController? = nil
+
     var viewcontroller : GameOverViewController!
     let score : String
     let highest_score :String
@@ -55,11 +57,23 @@ class GameOverScene: SKScene {
         let touchLocation = touch.locationInNode(contentNode)
         if(backButtom.containsPoint(touchLocation)){
             self.viewcontroller.dismissViewControllerAnimated(false, completion: nil)
-            self.beforeViewController.navigationController?.popToRootViewControllerAnimated(true)
+            if(beforeViewController != nil){
+                self.beforeViewController!.navigationController?.popToRootViewControllerAnimated(true)
+            }else{
+                self.beforeViewControllerB!.navigationController?.popToRootViewControllerAnimated(true)
+
+            }
             
         }else if (reGameButton.containsPoint(touchLocation)){
             self.viewcontroller.dismissViewControllerAnimated(false, completion: nil)
-            self.beforeViewController.loadGame()
+            if(beforeViewController != nil){
+                print("Normal")
+                self.beforeViewController!.loadGame()
+            }else{
+                print("Boss")
+
+                self.beforeViewControllerB!.loadGame()
+            }
         }
     }
     

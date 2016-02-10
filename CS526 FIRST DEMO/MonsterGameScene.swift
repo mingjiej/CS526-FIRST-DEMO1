@@ -14,6 +14,7 @@ enum colour: Int {
 }
 
 class MonsterGameScene: SKScene {
+    var beforeViewController : MonsterViewController!
     var blinkDone = false
     var monsterSwitch = NSTimeInterval(5)
     var score = Double(0);
@@ -71,7 +72,7 @@ class MonsterGameScene: SKScene {
     let feverEffect = SKEmitterNode(fileNamed: "Fever.sks")
     var fevertime = NSTimeInterval(10)
     var skillthreetime = NSTimeInterval(5)
-    var skillthreeOn = false
+    var skillthreeOn = true
     var skillthreeEffect = SKEmitterNode(fileNamed: "MyParticle.sks")
     var skillthreeAncharPoint = SKSpriteNode()
     var viewcontroller = MonsterViewController()
@@ -128,7 +129,9 @@ class MonsterGameScene: SKScene {
         playableRect = CGRect(x: playableMargin, y: 0,
             width: size.width - playableMargin/2,
             height: size.height - UIbackgroundHeight)
+        
         super.init(size: size)
+
     }
     override func didEvaluateActions() {
         collisionCheck();
@@ -140,7 +143,6 @@ class MonsterGameScene: SKScene {
         charater.runAction(SKAction.repeatActionForever(animation))
         monsterMove()
         setupSceneLayer()
-//        setupGemAction()
         playBackGroundMusic("bgm_002.mp3");
     }
     override func update(currentTime: NSTimeInterval) {

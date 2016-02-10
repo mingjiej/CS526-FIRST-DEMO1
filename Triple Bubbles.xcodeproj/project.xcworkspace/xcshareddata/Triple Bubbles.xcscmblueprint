@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ED11001210748AFFDE3680B24D3B75B2BEE2DEC0+++FA582CA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ED11001210748AFFDE3680B24D3B75B2BEE2DEC0+++7E1D43E" : 0,
+    "ED11001210748AFFDE3680B24D3B75B2BEE2DEC0+++FA582CA" : 0,
+    "ED11001210748AFFDE3680B24D3B75B2BEE2DEC0+++9A388EC" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D6F85E0E-DACA-40C1-BF2B-06C85BEA0C7F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ED11001210748AFFDE3680B24D3B75B2BEE2DEC0+++7E1D43E" : "cs%20526%20demo%202\/",
+    "ED11001210748AFFDE3680B24D3B75B2BEE2DEC0+++FA582CA" : "Triple%20Bubble\/",
+    "ED11001210748AFFDE3680B24D3B75B2BEE2DEC0+++9A388EC" : "cs%20526%20demo%202\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Triple Bubbles",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Triple Bubbles.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/triplebubble\/demo2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ED11001210748AFFDE3680B24D3B75B2BEE2DEC0+++7E1D43E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mingjiej\/CS526-FIRST-DEMO1.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ED11001210748AFFDE3680B24D3B75B2BEE2DEC0+++9A388EC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mingjiej\/CS526-FIRST-DEMO1.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ED11001210748AFFDE3680B24D3B75B2BEE2DEC0+++FA582CA"
+    }
+  ]
+}

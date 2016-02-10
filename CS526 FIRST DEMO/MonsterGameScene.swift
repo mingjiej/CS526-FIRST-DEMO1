@@ -72,7 +72,7 @@ class MonsterGameScene: SKScene {
     let feverEffect = SKEmitterNode(fileNamed: "Fever.sks")
     var fevertime = NSTimeInterval(10)
     var skillthreetime = NSTimeInterval(5)
-    var skillthreeOn = true
+    var skillthreeOn = false
     var skillthreeEffect = SKEmitterNode(fileNamed: "MyParticle.sks")
     var skillthreeAncharPoint = SKSpriteNode()
     var viewcontroller = MonsterViewController()

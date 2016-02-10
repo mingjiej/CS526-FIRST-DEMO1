@@ -15,6 +15,7 @@
 		86080A381C6AEE8C002B879C /* sliver.png in Resources */ = {isa = PBXBuildFile; fileRef = 86080A371C6AEE8C002B879C /* sliver.png */; };
 		86080A3A1C6AEF90002B879C /* sliver副本.png in Resources */ = {isa = PBXBuildFile; fileRef = 86080A391C6AEF90002B879C /* sliver副本.png */; };
 		86080A3E1C6AF57C002B879C /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 86080A3D1C6AF57C002B879C /* Pause.png */; };
+		8638556C1C6B026F00A1C2E9 /* TripleBubbleLaunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 8638556B1C6B026F00A1C2E9 /* TripleBubbleLaunch.png */; };
 		CE01549F1BE27FB600BF1711 /* MonsterGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01549E1BE27FB600BF1711 /* MonsterGameScene.swift */; };
 		CE0154A11BE280D500BF1711 /* MonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0154A01BE280D500BF1711 /* MonsterViewController.swift */; };
 		CE0154A51BE2880900BF1711 /* monster-1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0154A41BE2880900BF1711 /* monster-1.png */; };
@@ -208,6 +209,7 @@
 		86080A371C6AEE8C002B879C /* sliver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliver.png; sourceTree = "<group>"; };
 		86080A391C6AEF90002B879C /* sliver副本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliver副本.png"; sourceTree = "<group>"; };
 		86080A3D1C6AF57C002B879C /* Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause.png; sourceTree = "<group>"; };
+		8638556B1C6B026F00A1C2E9 /* TripleBubbleLaunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TripleBubbleLaunch.png; sourceTree = "<group>"; };
 		CE01549E1BE27FB600BF1711 /* MonsterGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterGameScene.swift; sourceTree = "<group>"; };
 		CE0154A01BE280D500BF1711 /* MonsterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterViewController.swift; sourceTree = "<group>"; };
 		CE0154A41BE2880900BF1711 /* monster-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monster-1.png"; sourceTree = "<group>"; };
@@ -647,6 +649,7 @@
 				86080A331C6AEB88002B879C /* golden副本.png */,
 				86080A3D1C6AF57C002B879C /* Pause.png */,
 				CEF0663D1BA8F27600927C86 /* testbackground.png */,
+				8638556B1C6B026F00A1C2E9 /* TripleBubbleLaunch.png */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				CEC49A0C1BD2D7AD005CAFF1 /* sound_fight_slash007.mp3 in Resources */,
 				CEC49A361BD2D7AD005CAFF1 /* sound_ui005.mp3 in Resources */,
 				CE0584351BD3063900AE7C6B /* Black.sks in Resources */,
+				8638556C1C6B026F00A1C2E9 /* TripleBubbleLaunch.png in Resources */,
 				CEC499EC1BD2D7AD005CAFF1 /* sound_022.mp3 in Resources */,
 				CEC49A181BD2D7AD005CAFF1 /* sound_fight_throw002.mp3 in Resources */,
 				CEC49A351BD2D7AD005CAFF1 /* sound_ui004.mp3 in Resources */,

@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="b7T-Uw-iXh">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="lVP-8v-cjX"/>
+                <viewControllerLayoutGuide type="bottom" id="8gR-C5-JaY"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="ljn-FU-OMd">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TripleBubbleLaunch.png" translatesAutoresizingMaskIntoConstraints="NO" id="cot-lJ-gdX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="cot-lJ-gdX" firstAttribute="centerX" secondItem="ljn-FU-OMd" secondAttribute="centerX" id="1j0-0z-Ujb"/>
+                    <constraint firstItem="cot-lJ-gdX" firstAttribute="width" secondItem="ljn-FU-OMd" secondAttribute="width" id="clc-md-oQ2"/>
+                    <constraint firstItem="cot-lJ-gdX" firstAttribute="centerY" secondItem="ljn-FU-OMd" secondAttribute="centerY" id="kMn-bS-MtH"/>
+                    <constraint firstItem="cot-lJ-gdX" firstAttribute="height" secondItem="ljn-FU-OMd" secondAttribute="height" id="lg1-kb-SHX"/>
+                </constraints>
+            </view>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="758" y="14"/>
+        </viewController>
     </objects>
+    <resources>
+        <image name="TripleBubbleLaunch.png" width="896" height="1344"/>
+    </resources>
 </document>

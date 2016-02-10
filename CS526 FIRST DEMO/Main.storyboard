@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="r6Y-2e-LCo">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -169,6 +168,101 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMe-qV-fnN">
+                                <rect key="frame" x="16" y="203" width="343" height="3"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jt8-AF-DR3">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="3"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.80417564659999996" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="jt8-AF-DR3" firstAttribute="height" secondItem="hMe-qV-fnN" secondAttribute="height" id="0wg-us-a05"/>
+                                    <constraint firstAttribute="height" constant="3" id="3XF-We-kXa"/>
+                                    <constraint firstItem="jt8-AF-DR3" firstAttribute="width" secondItem="hMe-qV-fnN" secondAttribute="width" multiplier="1:3" id="Xxu-0o-4WC"/>
+                                    <constraint firstItem="jt8-AF-DR3" firstAttribute="top" secondItem="hMe-qV-fnN" secondAttribute="top" id="qm2-b5-s8c"/>
+                                    <constraint firstItem="jt8-AF-DR3" firstAttribute="leading" secondItem="hMe-qV-fnN" secondAttribute="leading" id="yl2-DS-gpv"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OoJ-Tw-FyU">
+                                <rect key="frame" x="16" y="343" width="339" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPT-8z-my2">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="PCs-ic-XaH"/>
+                                            <constraint firstAttribute="height" constant="42" id="kzL-qQ-xfd"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Share-page_facebook"/>
+                                        <connections>
+                                            <action selector="connectFacebook:" destination="eXp-E1-0u8" eventType="touchUpInside" id="KTG-g2-Grp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnR-Iv-Jjd">
+                                        <rect key="frame" x="99" y="0.0" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="3Z0-jY-bG9"/>
+                                            <constraint firstAttribute="height" constant="42" id="58A-zl-RAS"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Share-page_twitter"/>
+                                        <connections>
+                                            <action selector="connectTwitter:" destination="eXp-E1-0u8" eventType="touchUpInside" id="BLB-H1-xOv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcn-6U-khn">
+                                        <rect key="frame" x="198" y="0.0" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="fCd-Wr-qml"/>
+                                            <constraint firstAttribute="width" constant="42" id="wJ8-9e-ibK"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Share-_email"/>
+                                        <connections>
+                                            <action selector="EMBTPress:" destination="eXp-E1-0u8" eventType="touchUpInside" id="ZO1-nu-q9u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ui3-Zh-hUo">
+                                        <rect key="frame" x="297" y="0.0" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="Rcg-X3-ZpN"/>
+                                            <constraint firstAttribute="height" constant="42" id="mHd-fk-OiB"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Share-page_MSM"/>
+                                        <connections>
+                                            <action selector="SMSBTPress:" destination="eXp-E1-0u8" eventType="touchUpInside" id="gmf-rf-R9X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcg-Kv-zOH">
+                                        <rect key="frame" x="98" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW7-LG-Vdf">
+                                        <rect key="frame" x="147" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhh-hd-lXI">
+                                        <rect key="frame" x="293" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Fcg-Kv-zOH"/>
+                                        <exclude reference="GW7-LG-Vdf"/>
+                                        <exclude reference="qhh-hd-lXI"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rP-CK-Ngq">
+                                <rect key="frame" x="16" y="111" width="339" height="50"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                                <state key="normal" title="Difficulty">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="difficultyButton:" destination="eXp-E1-0u8" eventType="touchUpInside" id="w1X-fL-DcM"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05l-QS-xji">
                                 <rect key="frame" x="16" y="166" width="111" height="40"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
@@ -210,23 +304,6 @@
                                     <action selector="back:" destination="eXp-E1-0u8" eventType="touchUpInside" id="cUH-62-o25"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMe-qV-fnN">
-                                <rect key="frame" x="16" y="203" width="343" height="3"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jt8-AF-DR3">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="3"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.80417564659999996" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="jt8-AF-DR3" firstAttribute="height" secondItem="hMe-qV-fnN" secondAttribute="height" id="0wg-us-a05"/>
-                                    <constraint firstAttribute="height" constant="3" id="3XF-We-kXa"/>
-                                    <constraint firstItem="jt8-AF-DR3" firstAttribute="width" secondItem="hMe-qV-fnN" secondAttribute="width" multiplier="1:3" id="Xxu-0o-4WC"/>
-                                    <constraint firstItem="jt8-AF-DR3" firstAttribute="top" secondItem="hMe-qV-fnN" secondAttribute="top" id="qm2-b5-s8c"/>
-                                    <constraint firstItem="jt8-AF-DR3" firstAttribute="leading" secondItem="hMe-qV-fnN" secondAttribute="leading" id="yl2-DS-gpv"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRk-ke-RxN">
                                 <rect key="frame" x="16" y="169" width="339" height="50"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
@@ -241,25 +318,39 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rP-CK-Ngq">
-                                <rect key="frame" x="16" y="111" width="339" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vap-b7-bNO">
+                                <rect key="frame" x="16" y="285" width="339" height="50"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
-                                <state key="normal" title="Difficulty">
+                                <state key="normal" title="Share">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="difficultyButton:" destination="eXp-E1-0u8" eventType="touchUpInside" id="w1X-fL-DcM"/>
+                                    <action selector="shareButton:" destination="eXp-E1-0u8" eventType="touchUpInside" id="LVr-gM-M6B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIZ-kl-zqO">
+                                <rect key="frame" x="16" y="343" width="339" height="50"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                                <state key="normal" title="Feedback">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="feedBackButton:" destination="eXp-E1-0u8" eventType="touchUpInside" id="3rz-FP-tep"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="I2i-gG-7bi" firstAttribute="top" secondItem="f6V-td-BgB" secondAttribute="bottom" constant="8" id="19c-sI-gRE"/>
+                            <constraint firstItem="vap-b7-bNO" firstAttribute="leading" secondItem="kLZ-Uf-rzJ" secondAttribute="leading" id="327-DI-mCQ"/>
                             <constraint firstItem="kLZ-Uf-rzJ" firstAttribute="leading" secondItem="6rP-CK-Ngq" secondAttribute="leading" id="3Zr-Cx-uXV"/>
                             <constraint firstItem="05l-QS-xji" firstAttribute="leading" secondItem="6rP-CK-Ngq" secondAttribute="leading" id="4mI-me-Z5N"/>
                             <constraint firstItem="Bue-5k-KD3" firstAttribute="leading" secondItem="xYb-RY-ROI" secondAttribute="trailing" constant="5" id="6ls-Xm-j4n"/>
                             <constraint firstItem="6rP-CK-Ngq" firstAttribute="leading" secondItem="943-bW-bkY" secondAttribute="leadingMargin" id="75U-TE-Tcs"/>
+                            <constraint firstItem="AIZ-kl-zqO" firstAttribute="top" secondItem="vap-b7-bNO" secondAttribute="bottom" constant="8" id="8i9-Gn-KSB"/>
+                            <constraint firstItem="OoJ-Tw-FyU" firstAttribute="trailing" secondItem="vap-b7-bNO" secondAttribute="trailing" id="9hw-h0-Uz8"/>
                             <constraint firstItem="6Ps-hv-9DE" firstAttribute="top" secondItem="f6V-td-BgB" secondAttribute="bottom" id="AQt-Xx-d8b"/>
+                            <constraint firstItem="AIZ-kl-zqO" firstAttribute="leading" secondItem="vap-b7-bNO" secondAttribute="leading" id="ApW-cf-sQg"/>
                             <constraint firstItem="xYb-RY-ROI" firstAttribute="leading" secondItem="05l-QS-xji" secondAttribute="trailing" constant="5" id="JMI-G8-1DH"/>
                             <constraint firstItem="xYb-RY-ROI" firstAttribute="width" secondItem="05l-QS-xji" secondAttribute="width" id="Jys-TD-NG2"/>
                             <constraint firstItem="XRk-ke-RxN" firstAttribute="trailing" secondItem="6rP-CK-Ngq" secondAttribute="trailing" id="Kzc-Jp-NR1"/>
@@ -267,19 +358,24 @@
                             <constraint firstItem="Bue-5k-KD3" firstAttribute="top" secondItem="05l-QS-xji" secondAttribute="top" id="NB1-c3-dFm"/>
                             <constraint firstItem="XRk-ke-RxN" firstAttribute="leading" secondItem="6rP-CK-Ngq" secondAttribute="leading" id="Oa7-Yg-rKc"/>
                             <constraint firstItem="Bue-5k-KD3" firstAttribute="width" secondItem="05l-QS-xji" secondAttribute="width" id="P8i-Xd-Xi1"/>
+                            <constraint firstItem="vap-b7-bNO" firstAttribute="top" secondItem="kLZ-Uf-rzJ" secondAttribute="bottom" constant="8" id="Pyt-pK-LCg"/>
                             <constraint firstItem="hMe-qV-fnN" firstAttribute="top" secondItem="xYb-RY-ROI" secondAttribute="bottom" constant="-3" id="TqP-RD-knp"/>
+                            <constraint firstItem="vap-b7-bNO" firstAttribute="trailing" secondItem="kLZ-Uf-rzJ" secondAttribute="trailing" id="XBF-CO-0rx"/>
                             <constraint firstItem="kLZ-Uf-rzJ" firstAttribute="trailing" secondItem="6rP-CK-Ngq" secondAttribute="trailing" id="YzY-Ov-wVo"/>
                             <constraint firstItem="XRk-ke-RxN" firstAttribute="leading" secondItem="943-bW-bkY" secondAttribute="leadingMargin" constant="-4" id="a8F-ML-B2g"/>
                             <constraint firstItem="6Ps-hv-9DE" firstAttribute="leading" secondItem="943-bW-bkY" secondAttribute="leadingMargin" constant="-4" id="aTf-2t-xGY"/>
+                            <constraint firstItem="OoJ-Tw-FyU" firstAttribute="top" secondItem="vap-b7-bNO" secondAttribute="bottom" constant="8" id="abU-aI-uQj"/>
                             <constraint firstItem="hMe-qV-fnN" firstAttribute="leading" secondItem="05l-QS-xji" secondAttribute="leading" id="bba-FT-OHq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6rP-CK-Ngq" secondAttribute="trailing" constant="4" id="etf-ZB-dvf"/>
                             <constraint firstItem="xYb-RY-ROI" firstAttribute="top" secondItem="05l-QS-xji" secondAttribute="top" id="l0g-oj-J3W"/>
                             <constraint firstItem="6rP-CK-Ngq" firstAttribute="top" secondItem="I2i-gG-7bi" secondAttribute="bottom" constant="20" id="l9G-YR-Njd"/>
                             <constraint firstItem="XRk-ke-RxN" firstAttribute="top" secondItem="6rP-CK-Ngq" secondAttribute="bottom" constant="8" id="pOd-DS-CJL"/>
+                            <constraint firstItem="OoJ-Tw-FyU" firstAttribute="leading" secondItem="vap-b7-bNO" secondAttribute="leading" id="pzV-S9-GjA"/>
                             <constraint firstItem="kLZ-Uf-rzJ" firstAttribute="top" secondItem="XRk-ke-RxN" secondAttribute="bottom" constant="8" id="roc-pc-cvM"/>
                             <constraint firstItem="hMe-qV-fnN" firstAttribute="trailing" secondItem="Bue-5k-KD3" secondAttribute="trailing" id="tul-UN-i5I"/>
                             <constraint firstItem="05l-QS-xji" firstAttribute="top" secondItem="6rP-CK-Ngq" secondAttribute="bottom" constant="5" id="umV-ff-e24"/>
                             <constraint firstItem="I2i-gG-7bi" firstAttribute="centerX" secondItem="943-bW-bkY" secondAttribute="centerX" id="vua-bM-sgW"/>
+                            <constraint firstItem="AIZ-kl-zqO" firstAttribute="trailing" secondItem="vap-b7-bNO" secondAttribute="trailing" id="y0q-aW-PEa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -294,9 +390,12 @@
                         <outlet property="aboutLabel" destination="kLZ-Uf-rzJ" id="sYP-KC-KM4"/>
                         <outlet property="difficultyLabel" destination="6rP-CK-Ngq" id="6RK-xf-IK6"/>
                         <outlet property="easyLabel" destination="05l-QS-xji" id="Lhu-3O-5Uw"/>
+                        <outlet property="feedbackLabel" destination="AIZ-kl-zqO" id="mJV-yk-wVe"/>
                         <outlet property="hardLabel" destination="Bue-5k-KD3" id="fVB-TF-dZF"/>
                         <outlet property="instructionLabel" destination="XRk-ke-RxN" id="Nbt-ON-dqI"/>
                         <outlet property="mediumLabel" destination="xYb-RY-ROI" id="cQ8-Yy-HZG"/>
+                        <outlet property="shareButtonStack" destination="OoJ-Tw-FyU" id="hnP-k9-vrY"/>
+                        <outlet property="shareLabel" destination="vap-b7-bNO" id="kyb-wP-TJk"/>
                         <outlet property="tabBar" destination="jt8-AF-DR3" id="664-L9-hLj"/>
                         <outlet property="tabBarBackground" destination="hMe-qV-fnN" id="qEJ-0b-TqK"/>
                     </connections>
@@ -326,6 +425,10 @@
     </scenes>
     <resources>
         <image name="Return.png" width="89" height="88"/>
+        <image name="Share-_email" width="74" height="73"/>
+        <image name="Share-page_MSM" width="72" height="72"/>
+        <image name="Share-page_facebook" width="75" height="76"/>
+        <image name="Share-page_twitter" width="75" height="76"/>
         <image name="golden副本.png" width="203" height="154"/>
         <image name="shop.png" width="219" height="151"/>
         <image name="sliver副本.png" width="201" height="147"/>

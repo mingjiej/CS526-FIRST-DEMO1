@@ -57,6 +57,7 @@ class MonsterGameScene: SKScene {
     var collectionLow = Collection()
     var collectionSet = [Collection]()
     
+    var monsterAttackChance = 5
     var monster1 = SKSpriteNode()
     var skill1 = SKSpriteNode(imageNamed: "skill-1")
     var skill2 = SKSpriteNode(imageNamed: "skill-2")
@@ -89,8 +90,9 @@ class MonsterGameScene: SKScene {
     var counter = 0;
     var totalGameTime = Float(0)
     var lastUpdateFallTime = Float(0)
-    var gemFallInterval = NSTimeInterval(0.8)
+    var gemFallInterval = NSTimeInterval(0.6)
     var gemFallSpeed : NSTimeInterval = 2
+    var monsterAttackFallSpeed : NSTimeInterval = 2
     var feverSecond = SKLabelNode(fontNamed: "Arial")
     var LifebarSize = CGFloat(0)
     var monsterbarSize = CGFloat(0)
@@ -106,6 +108,9 @@ class MonsterGameScene: SKScene {
     var number = Int(0)
     //set the swipe length
     var touchLocation = CGPointZero
+    
+    
+    
     init(size: CGSize, num: Int) {
         number = num
         if(number==1){
@@ -121,6 +126,22 @@ class MonsterGameScene: SKScene {
         texture.append(SKTexture(imageNamed: "char-6.png"))
         texture.append(SKTexture(imageNamed: "char-5.png"))
         texture.append(SKTexture(imageNamed: "char-1.png"))
+        
+        switch (DataStruct.difficulty){
+        case DataStruct.EASY:
+            monsterAttackChance = 15
+            monsterAttackFallSpeed = 2.5
+        case DataStruct.MEDIUM:
+            monsterAttackChance = 11
+            monsterAttackFallSpeed = 2.0
+        case DataStruct.HARD:
+            monsterAttackChance = 7
+            monsterAttackFallSpeed = 1.5
+            
+        default:
+            break
+        }
+        
         animation = SKAction.animateWithTextures(texture, timePerFrame: 0.05)
         gameState = .GameRunning
         maxAspectRatio = 16.0/9.0 // iPhone 5"
@@ -651,15 +672,15 @@ class MonsterGameScene: SKScene {
          blinkDone = true
     }
     func monsterAttack() {
-        let attackChance : Int = randomInRange(1...5)
-        if(attackChance<=3) {
+        let attackChance : Int = randomInRange(1...monsterAttackChance)
+        if(attackChance<=5) {
             let attack = SKSpriteNode(imageNamed: "shoot copy.png")
             attack.setScale(2.0)
             attack.name = "attack"
             attack.position = monster1.position
             attack.zPosition = 100
             UIlayerNode.addChild(attack)
-            let testActinon = SKAction.moveBy(CGVector(dx: 0, dy: -size.height-CGFloat(attack.size.height)), duration: gemFallSpeed)
+            let testActinon = SKAction.moveBy(CGVector(dx: 0, dy: -size.height-CGFloat(attack.size.height)), duration: monsterAttackFallSpeed)
             let remove = SKAction.removeFromParent()
             attack.runAction(SKAction.sequence([testActinon, remove]))
         }

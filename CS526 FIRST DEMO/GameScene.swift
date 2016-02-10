@@ -110,6 +110,26 @@ class GameScene: SKScene {
         texture.append(SKTexture(imageNamed: "char-5.png"))
         texture.append(SKTexture(imageNamed: "char-1.png"))
         animation = SKAction.animateWithTextures(texture, timePerFrame: 0.05)
+        
+        //set difficulty
+        switch (DataStruct.difficulty){
+        case DataStruct.EASY:
+            normalGameLength = 20
+            gemFallInterval = Float(1)
+            gemFallSpeed = 2.5
+        case DataStruct.MEDIUM:
+            normalGameLength = 15
+            gemFallInterval = Float(0.8)
+            gemFallSpeed = 2.0
+        case DataStruct.HARD:
+            normalGameLength = 10
+            gemFallInterval = Float(0.6)
+            gemFallSpeed = 1.5
+            
+        default:
+            break
+        }
+        
         gameState = .GameRunning
         maxAspectRatio = 16.0/9.0 // iPhone 5"
         maxAspectRatioWidth = size.height / maxAspectRatio

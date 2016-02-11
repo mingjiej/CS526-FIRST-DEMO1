@@ -265,8 +265,8 @@
                                     <action selector="close:" destination="7Ly-tb-2eD" eventType="touchUpInside" id="NK2-Vu-8Gu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lin-kW-Z6K">
-                                <rect key="frame" x="117" y="57" width="86" height="57"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Triple Bubble" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lin-kW-Z6K">
+                                <rect key="frame" x="71" y="57" width="178" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="tWn-7o-laq"/>
                                 </constraints>

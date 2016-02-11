@@ -54,6 +54,7 @@ class GameOverViewController: UIViewController {
         skView.ignoresSiblingOrder = true
         scene.scaleMode = .AspectFill
         skView.presentScene(scene)
+        DataStruct.playing = false
         
     }
     

@@ -300,7 +300,7 @@ class SettingView:UIViewController, MFMessageComposeViewControllerDelegate, MFMa
         default:
             break
         }
-        self.view.hidden = true
+        //self.view.hidden = true
         self.navigationController?.navigationBarHidden = true
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -333,7 +333,7 @@ class SettingView:UIViewController, MFMessageComposeViewControllerDelegate, MFMa
     
     // MARK: MFMailComposeViewControllerDelegate Method
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        self.view.hidden = true
+        //self.view.hidden = true
         self.navigationController?.navigationBarHidden = true
         switch result.rawValue {
         case MFMailComposeResultCancelled.rawValue:
@@ -347,7 +347,7 @@ class SettingView:UIViewController, MFMessageComposeViewControllerDelegate, MFMa
         default:
             break
         }
-        self.dismissViewControllerAnimated(true, completion: nil)
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
     
     

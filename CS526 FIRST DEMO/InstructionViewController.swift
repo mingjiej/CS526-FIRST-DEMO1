@@ -12,7 +12,7 @@ class InstructionViewController: UIViewController, UIPageViewControllerDataSourc
 
     var beforeViewController : SettingView? = nil
     var pageViewController : UIPageViewController!
-    var InstructionArray : NSMutableArray = ["uiground_1.jpg", "DiamondRed.png"]
+    var InstructionArray : NSMutableArray = ["TripleBubbleIns_1.png", "TripleBubbleIns_2.png"]
 
     @IBOutlet weak var backGround: UIImageView!
     
@@ -33,7 +33,7 @@ class InstructionViewController: UIViewController, UIPageViewControllerDataSourc
         self.pageViewController.dataSource = self
         self.pageViewController.delegate = self
         
-        self.pageViewController.view.frame = CGRectMake(backGround.frame.minX + 20, backGround.frame.minY + 40 , backGround.frame.size.width - 40, backGround.frame.size.height - 60 )
+        self.pageViewController.view.frame = CGRectMake(backGround.frame.minX + 20, backGround.frame.minY + 40 , self.view.bounds.width - 70 , self.view.bounds.height - 100 )
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMoveToParentViewController(self)

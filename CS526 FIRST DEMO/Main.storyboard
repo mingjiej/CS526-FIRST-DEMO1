@@ -159,11 +159,11 @@
                         <viewControllerLayoutGuide type="bottom" id="yA8-xl-Moc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6qi-vA-r7y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uiground_1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aOv-6i-nPe">
-                                <rect key="frame" x="16" y="20" width="288" height="528"/>
+                                <rect key="frame" x="16" y="20" width="343" height="627"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igE-gh-nmX">
                                 <rect key="frame" x="16" y="20" width="40" height="40"/>
@@ -187,7 +187,7 @@
                             <constraint firstItem="aOv-6i-nPe" firstAttribute="top" secondItem="5MU-nL-ou6" secondAttribute="bottom" id="y8r-z5-IuZ"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="backGround" destination="aOv-6i-nPe" id="X7h-yG-2G9"/>
                     </connections>

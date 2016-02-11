@@ -21,6 +21,8 @@
 		8655C93C1C6C29A400EE0AFB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655C93B1C6C29A400EE0AFB /* AboutViewController.swift */; };
 		8655C93E1C6C2D6800EE0AFB /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655C93D1C6C2D6800EE0AFB /* InstructionViewController.swift */; };
 		8655C9401C6C34B000EE0AFB /* InstructionViewControllerContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8655C93F1C6C34B000EE0AFB /* InstructionViewControllerContent.swift */; };
+		8655C9431C6C4B8C00EE0AFB /* TripleBubbleIns_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8655C9411C6C4B8B00EE0AFB /* TripleBubbleIns_1.png */; };
+		8655C9441C6C4B8C00EE0AFB /* TripleBubbleIns_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8655C9421C6C4B8B00EE0AFB /* TripleBubbleIns_2.png */; };
 		CE01549F1BE27FB600BF1711 /* MonsterGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01549E1BE27FB600BF1711 /* MonsterGameScene.swift */; };
 		CE0154A11BE280D500BF1711 /* MonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0154A01BE280D500BF1711 /* MonsterViewController.swift */; };
 		CE0154A51BE2880900BF1711 /* monster-1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0154A41BE2880900BF1711 /* monster-1.png */; };
@@ -219,6 +221,8 @@
 		8655C93B1C6C29A400EE0AFB /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		8655C93D1C6C2D6800EE0AFB /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		8655C93F1C6C34B000EE0AFB /* InstructionViewControllerContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewControllerContent.swift; sourceTree = "<group>"; };
+		8655C9411C6C4B8B00EE0AFB /* TripleBubbleIns_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TripleBubbleIns_1.png; sourceTree = "<group>"; };
+		8655C9421C6C4B8B00EE0AFB /* TripleBubbleIns_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TripleBubbleIns_2.png; sourceTree = "<group>"; };
 		CE01549E1BE27FB600BF1711 /* MonsterGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterGameScene.swift; sourceTree = "<group>"; };
 		CE0154A01BE280D500BF1711 /* MonsterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterViewController.swift; sourceTree = "<group>"; };
 		CE0154A41BE2880900BF1711 /* monster-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monster-1.png"; sourceTree = "<group>"; };
@@ -662,6 +666,8 @@
 				86080A331C6AEB88002B879C /* golden副本.png */,
 				86080A3D1C6AF57C002B879C /* Pause.png */,
 				8638556B1C6B026F00A1C2E9 /* TripleBubbleLaunch.png */,
+				8655C9411C6C4B8B00EE0AFB /* TripleBubbleIns_1.png */,
+				8655C9421C6C4B8B00EE0AFB /* TripleBubbleIns_2.png */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -759,6 +765,7 @@
 				CEC49A211BD2D7AD005CAFF1 /* sound_monsterdead002.mp3 in Resources */,
 				CE1EC5871BDC50FF007573D3 /* collection-blue.png in Resources */,
 				CECE75951BBE456700B2911C /* DiamondRed.png in Resources */,
+				8655C9441C6C4B8C00EE0AFB /* TripleBubbleIns_2.png in Resources */,
 				CEC49A031BD2D7AD005CAFF1 /* sound_fight_skillhit007.mp3 in Resources */,
 				CEC499971BD2D797005CAFF1 /* bgm_004.mp3 in Resources */,
 				CEF066201BA8EB1500927C86 /* Images.xcassets in Resources */,
@@ -881,6 +888,7 @@
 				CEC499831BD2D737005CAFF1 /* fightground_heishita.jpg in Resources */,
 				CEC49A3A1BD2D7AD005CAFF1 /* sound_uifight002.mp3 in Resources */,
 				CEC499961BD2D797005CAFF1 /* bgm_003.mp3 in Resources */,
+				8655C9431C6C4B8C00EE0AFB /* TripleBubbleIns_1.png in Resources */,
 				CEC499F11BD2D7AD005CAFF1 /* sound_dig002.mp3 in Resources */,
 				CEC49A161BD2D7AD005CAFF1 /* sound_fight_slash017.mp3 in Resources */,
 				CEC4997C1BD2D718005CAFF1 /* evolutionlv_9.png in Resources */,

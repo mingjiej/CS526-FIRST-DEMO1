@@ -76,9 +76,13 @@ class MonsterGameScene: SKScene {
     var skillthreeOn = false
     var skillthreeEffect = SKEmitterNode(fileNamed: "MyParticle.sks")
     var skillthreeAncharPoint = SKSpriteNode()
-    var viewcontroller = MonsterViewController()
+    //var viewcontroller = MonsterViewController()
     let backgroundImage = SKSpriteNode(imageNamed: "fightground_yingyachengbao.jpg")
     let backgroundImagedown = SKSpriteNode(imageNamed: "fightground_yingyachengbao_startPos.jpg")
+    let backButtom = SKSpriteNode(imageNamed: "BackToMain.png")
+    let reGameButton = SKSpriteNode(imageNamed: "replay.png")
+    let resumeButton = SKSpriteNode(imageNamed: "resume.png")
+    
     enum GameState {
         case GameRunning
         case GameOver
@@ -257,13 +261,22 @@ class MonsterGameScene: SKScene {
         }
     }
     
+    func pauseGame()
+    {
+        self.view?.paused = true
+    }
+    
     // record the touch begin location
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = touches.first! as UITouch
         touchLocation = touch.locationInNode(chararterLayerNode)
         if(pauseButton.containsPoint(touchLocation)){
+            backButtom.hidden = false
+            resumeButton.hidden = false
+            reGameButton.hidden = false
+            pauseButton.hidden = true
             if(self.view?.paused == false){
-                self.view?.paused = true
+                self.runAction(SKAction.runBlock(self.pauseGame))
             } else {
                 self.view?.paused = false
                 lastUpdateTime = 0
@@ -289,6 +302,20 @@ class MonsterGameScene: SKScene {
                 skillthree()
             }
             removeSkill(level, num: 3)
+        }else if(resumeButton.containsPoint(touchLocation)){
+            
+            backButtom.hidden = true
+            resumeButton.hidden = true
+            reGameButton.hidden = true
+            pauseButton.hidden = false
+            self.view?.paused = false
+            
+            lastUpdateTime = 0
+        }else if(backButtom.containsPoint(touchLocation)){
+            beforeViewController.navigationController?.popToRootViewControllerAnimated(true)
+            
+        }else if(reGameButton.containsPoint(touchLocation)){
+            beforeViewController.loadGame()
         }
     }
     
@@ -322,6 +349,27 @@ class MonsterGameScene: SKScene {
         UIlayerNode.addChild(pauseButton)
         pauseButton.zPosition = 200
         pauseButton.position = CGPoint(x: playableMargin + pauseButton.size.width/2, y: 990)
+        
+        backButtom.zPosition = 60
+        backButtom.position = CGPointMake(size.width / 2 + 150, size.height / 2 )
+        backButtom.size = CGSizeMake(100,100)
+        
+        reGameButton.zPosition = 60
+        reGameButton.position = CGPointMake(size.width / 2 - 150, size.height / 2)
+        reGameButton.size = CGSizeMake(100,100)
+        
+        resumeButton.zPosition = 60
+        resumeButton.position = CGPointMake(size.width / 2, size.height / 2)
+        resumeButton.size = CGSizeMake(100,100)
+        
+        UIlayerNode.addChild(backButtom)
+        UIlayerNode.addChild(reGameButton)
+        UIlayerNode.addChild(resumeButton)
+        
+        backButtom.hidden = true
+        resumeButton.hidden = true
+        reGameButton.hidden = true
+        pauseButton.hidden = false
         
         charater.position = CGPoint(x: size.width/2, y: 1/5*size.height)
         charater.zPosition = 20
@@ -435,7 +483,7 @@ class MonsterGameScene: SKScene {
     // display the score and game over scene, then restart the game
     func restartGame(){
         backgroundMusicPlayer.stop()
-        self.viewcontroller.back(Double(String(format: "%.2f", score))!)
+        self.beforeViewController.back(Double(String(format: "%.2f", score))!)
     }
     // calculate the swipe distance and move the character
     // initialize UI

@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        if  NSUserDefaults.standardUserDefaults().objectForKey("Difficulty") != nil{
+         DataStruct.difficulty = NSUserDefaults.standardUserDefaults().objectForKey("Difficulty") as! Int
+        }
         // Override point for customization after application launch.
         return true
     }
@@ -39,6 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        NSUserDefaults.standardUserDefaults().setObject(DataStruct.difficulty, forKey: "Difficulty")
+        print("save difficulty")
     }
 
 

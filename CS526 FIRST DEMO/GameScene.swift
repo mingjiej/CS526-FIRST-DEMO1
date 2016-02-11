@@ -99,6 +99,10 @@ class GameScene: SKScene {
     
     let pauseButton = SKSpriteNode(imageNamed: "Pause.png")
     
+    let backButtom = SKSpriteNode(imageNamed: "BackToMain.png")
+    let reGameButton = SKSpriteNode(imageNamed: "replay.png")
+    let resumeButton = SKSpriteNode(imageNamed: "resume.png")
+    
     init(size: CGSize , gvcontroller: GameViewController ) {
         self.viewcontroller = gvcontroller
         var texture : [SKTexture] = []
@@ -221,18 +225,44 @@ class GameScene: SKScene {
 
         }
     }
+    func pauseGame()
+    {
+        self.view?.paused = true
+    }
+
     
     // record the touch begin location
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = touches.first! as UITouch
         touchLocation = touch.locationInNode(chararterLayerNode)
         if(pauseButton.containsPoint(touchLocation)){
+            backButtom.hidden = false
+            resumeButton.hidden = false
+            reGameButton.hidden = false
+            pauseButton.hidden = true
             if(self.view?.paused == false){
-                self.view?.paused = true
+
+                self.runAction(SKAction.runBlock(self.pauseGame))
+ 
             } else {
                 self.view?.paused = false
                 lastUpdateTime = 0
+
             }
+        }else if(resumeButton.containsPoint(touchLocation)){
+            
+            backButtom.hidden = true
+            resumeButton.hidden = true
+            reGameButton.hidden = true
+            pauseButton.hidden = false
+            self.view?.paused = false
+
+            lastUpdateTime = 0
+        }else if(backButtom.containsPoint(touchLocation)){
+            viewcontroller.navigationController?.popToRootViewControllerAnimated(true)
+            
+        }else if(reGameButton.containsPoint(touchLocation)){
+            viewcontroller.loadGame()
         }
     }
     
@@ -283,10 +313,32 @@ class GameScene: SKScene {
         backgroundImagedown.zPosition = -100;
         backgroundImagedown.position = CGPoint(x: playableMargin, y: 0)
         
-        UIlayerNode.addChild(pauseButton)
+        
         pauseButton.zPosition = 100
         pauseButton.position = CGPoint(x: size.width/2, y: 50)
         pauseButton.size = CGSizeMake(80,80)
+        
+        backButtom.zPosition = 60
+        backButtom.position = CGPointMake(size.width / 2 + 150, size.height / 2 )
+        backButtom.size = CGSizeMake(100,100)
+        
+        reGameButton.zPosition = 60
+        reGameButton.position = CGPointMake(size.width / 2 - 150, size.height / 2)
+        reGameButton.size = CGSizeMake(100,100)
+        
+        resumeButton.zPosition = 60
+        resumeButton.position = CGPointMake(size.width / 2, size.height / 2)
+        resumeButton.size = CGSizeMake(100,100)
+        
+        UIlayerNode.addChild(pauseButton)
+        UIlayerNode.addChild(backButtom)
+        UIlayerNode.addChild(reGameButton)
+        UIlayerNode.addChild(resumeButton)
+        
+        backButtom.hidden = true
+        resumeButton.hidden = true
+        reGameButton.hidden = true
+        pauseButton.hidden = false
         
         charater.position = CGPoint(x: size.width/2, y: 1/5*size.height)
         charater.zPosition = 20

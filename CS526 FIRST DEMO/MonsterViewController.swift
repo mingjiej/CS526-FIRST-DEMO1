@@ -28,7 +28,7 @@ class MonsterViewController: UIViewController {
     
     func loadGame(){
         let scene = MonsterGameScene(size: CGSize(width: 750, height: 1134), num: monsterIndex)// Configure the view.
-        scene.viewcontroller = self
+        scene.beforeViewController = self
         let skView = self.view as! SKView
         //        skView.showsFPS = true
         //        skView.showsNodeCount  = true

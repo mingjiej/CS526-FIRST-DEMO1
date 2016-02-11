@@ -60,6 +60,9 @@ class SettingView:UIViewController, MFMessageComposeViewControllerDelegate, MFMa
         super.viewDidLoad()
     }
     override func viewWillAppear(animated: Bool) {
+
+    }
+    override func viewDidAppear(animated: Bool) {
         switch (DataStruct.difficulty) {
         case DataStruct.EASY :
             easyLabel.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
@@ -84,17 +87,14 @@ class SettingView:UIViewController, MFMessageComposeViewControllerDelegate, MFMa
             mediumLabel.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
             
             hardLabel.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-            let width = self.tabBar.frame.width
+            let width = self.tabBar.bounds.width
             
             UIView.animateWithDuration(0.05, animations:{ () -> Void in
-                self.tabBar.transform = CGAffineTransformMakeTranslation(width * 2, 0)
+                self.tabBar.transform = CGAffineTransformMakeTranslation(width * 2  , 0)
                 }, completion : nil)
         default:
             break
         }
-    }
-    override func viewDidAppear(animated: Bool) {
-        
         super.viewDidAppear(animated)
     }
     @IBAction func back(sender: UIButton) {
@@ -175,8 +175,6 @@ class SettingView:UIViewController, MFMessageComposeViewControllerDelegate, MFMa
                         }, completion: nil)
             }
         }
-
-        
     }
     
     
@@ -196,6 +194,7 @@ class SettingView:UIViewController, MFMessageComposeViewControllerDelegate, MFMa
         print("easy")
 
     }
+    
     @IBAction func goMedium(sender: UIButton) {
         
         easyLabel.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
@@ -214,6 +213,7 @@ class SettingView:UIViewController, MFMessageComposeViewControllerDelegate, MFMa
         
         print("medium")
     }
+    
     @IBAction func goHard(sender: UIButton) {
         
         easyLabel.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
@@ -233,7 +233,16 @@ class SettingView:UIViewController, MFMessageComposeViewControllerDelegate, MFMa
 
     }
     
+    @IBAction func AboutButton(sender: UIButton) {
+        getToSmallScale()
+    self.performSegueWithIdentifier("showAbout", sender: nil)
+    }
     
+    @IBAction func InstructionButton(sender: UIButton) {
+        getToSmallScale()
+    self.performSegueWithIdentifier("showInstruction", sender: nil)
+        
+    }
      @IBAction func connectFacebook( sender: UIButton ){
         
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
@@ -351,5 +360,32 @@ class SettingView:UIViewController, MFMessageComposeViewControllerDelegate, MFMa
         mc.setToRecipients(toRecipients)
         self.presentViewController(mc, animated: true, completion: nil)
     }
-
+    func getToSmallScale(){
+        UIView.animateWithDuration(0.3, animations: {
+   
+            self.view.alpha = 0.8
+            self.view.transform =  CGAffineTransformConcat(CGAffineTransformMakeScale(0.9, 0.9), CGAffineTransformMakeTranslation(0, 30))})
+        }
+    
+    func returnToNormalScale(){
+        print("ani")
+        UIView.animateWithDuration(0.3, animations: {
+            
+            self.view.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1, 1), CGAffineTransformMakeTranslation(0, 0))
+            self.view.alpha = 1
+            
+        })
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showAbout"{
+            let des = segue.destinationViewController as! AboutViewController
+            des.beforeViewController = self
+        
+        }else if segue.identifier == "showInstruction"{
+            let des = segue.destinationViewController as! InstructionViewController
+            des.beforeViewController = self
+            
+        }
+    }
 }

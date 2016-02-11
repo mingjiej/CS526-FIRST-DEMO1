@@ -13,4 +13,6 @@ public struct DataStruct {
     static let MEDIUM = 1
     static let HARD = 2
     static var difficulty = 0
+    static var playing = false
+    
 }

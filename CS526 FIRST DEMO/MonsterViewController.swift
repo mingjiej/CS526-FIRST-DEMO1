@@ -44,6 +44,8 @@ class MonsterViewController: UIViewController {
     override func viewDidDisappear(animated: Bool) {
         let skView = self.view as! SKView
         skView.presentScene(nil)
+        stopBackGroundMusic()
+
         
     }
     

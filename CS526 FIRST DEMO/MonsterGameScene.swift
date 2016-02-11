@@ -168,7 +168,10 @@ class MonsterGameScene: SKScene {
         charater.runAction(SKAction.repeatActionForever(animation))
         monsterMove()
         setupSceneLayer()
-        playBackGroundMusic("bgm_002.mp3");
+        if(DataStruct.playing == false){
+            playBackGroundMusic("bgm_002.mp3");
+            DataStruct.playing = true
+        }
     }
     override func update(currentTime: NSTimeInterval) {
         if (gameState == .GameRunning) {
@@ -184,7 +187,7 @@ class MonsterGameScene: SKScene {
             }
             if(skillthreeOn) {
                 skillthreetime -= dt
-                monsterlife.size.width -= 100*CGFloat(dt)
+                monsterlife.size.width -= 60*CGFloat(dt)
                 if(skillthreetime<=0) {
                     skillthreeOn = false
                     skillthreetime = 5
@@ -302,7 +305,7 @@ class MonsterGameScene: SKScene {
                 skillthree()
             }
             removeSkill(level, num: 3)
-        }else if(resumeButton.containsPoint(touchLocation)){
+        }else if(self.view?.paused == true && resumeButton.containsPoint(touchLocation)){
             
             backButtom.hidden = true
             resumeButton.hidden = true
@@ -311,10 +314,10 @@ class MonsterGameScene: SKScene {
             self.view?.paused = false
             
             lastUpdateTime = 0
-        }else if(backButtom.containsPoint(touchLocation)){
+        }else if(self.view?.paused == true && backButtom.containsPoint(touchLocation)){
             beforeViewController.navigationController?.popToRootViewControllerAnimated(true)
             
-        }else if(reGameButton.containsPoint(touchLocation)){
+        }else if(self.view?.paused == true && reGameButton.containsPoint(touchLocation)){
             beforeViewController.loadGame()
         }
     }
@@ -555,11 +558,11 @@ class MonsterGameScene: SKScene {
     // calculate the target position after character moving
     func moveCharacter() ->CGPoint{
         if(velocity == CGPointZero) {
-            if(swipe.dx>0 && charater.position.x < size.width/3*2){
-                return CGPoint(x: charater.position.x + size.width/6, y: size.height/5)
+            if(swipe.dx>0 && charater.position.x < size.width / 3 * 2){
+                return CGPoint(x: charater.position.x + size.width/6, y: size.height / 5)
             }
-            if(swipe.dx<0 && charater.position.x > size.width/3) {
-                return CGPoint(x: charater.position.x-size.width/6, y: size.height/5)
+            if(swipe.dx<0 && charater.position.x > size.width / 3) {
+                return CGPoint(x: charater.position.x-size.width / 6, y: size.height / 5)
             }
         }
         return position
@@ -702,7 +705,7 @@ class MonsterGameScene: SKScene {
         UIlayerNode.enumerateChildNodesWithName("skill") { node, _ in
             if CGRectIntersectsRect(CGRectInset(node.frame,20, 20), self.monster1.frame){
                 self.monsterBlink(self.monster1)
-                self.monsterlife.size.width -= 150
+                self.monsterlife.size.width -= 90
             }
         }
     }

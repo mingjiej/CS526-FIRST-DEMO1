@@ -118,15 +118,15 @@ class GameScene: SKScene {
         //set difficulty
         switch (DataStruct.difficulty){
         case DataStruct.EASY:
-            normalGameLength = 20
+            normalGameLength = 30
             gemFallInterval = Float(1)
             gemFallSpeed = 2.5
         case DataStruct.MEDIUM:
-            normalGameLength = 15
+            normalGameLength = 25
             gemFallInterval = Float(0.8)
             gemFallSpeed = 2.0
         case DataStruct.HARD:
-            normalGameLength = 10
+            normalGameLength = 20
             gemFallInterval = Float(0.6)
             gemFallSpeed = 1.5
             
@@ -152,7 +152,11 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         charater.runAction(SKAction.repeatActionForever(animation))
         setupSceneLayer()
-        playBackGroundMusic("bgm_003.mp3");
+        if(DataStruct.playing == false){
+            playBackGroundMusic("bgm_003.mp3");
+            DataStruct.playing = true
+        }
+        
       
     }
     override func update(currentTime: NSTimeInterval) {
@@ -249,7 +253,7 @@ class GameScene: SKScene {
                 lastUpdateTime = 0
 
             }
-        }else if(resumeButton.containsPoint(touchLocation)){
+        }else if(self.view?.paused == true && resumeButton.containsPoint(touchLocation)){
             
             backButtom.hidden = true
             resumeButton.hidden = true
@@ -258,10 +262,10 @@ class GameScene: SKScene {
             self.view?.paused = false
 
             lastUpdateTime = 0
-        }else if(backButtom.containsPoint(touchLocation)){
+        }else if(self.view?.paused == true && backButtom.containsPoint(touchLocation)){
             viewcontroller.navigationController?.popToRootViewControllerAnimated(true)
             
-        }else if(reGameButton.containsPoint(touchLocation)){
+        }else if(self.view?.paused == true && reGameButton.containsPoint(touchLocation)){
             viewcontroller.loadGame()
         }
     }

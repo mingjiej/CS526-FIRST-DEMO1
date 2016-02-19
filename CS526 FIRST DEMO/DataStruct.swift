@@ -14,5 +14,6 @@ public struct DataStruct {
     static let HARD = 2
     static var difficulty = 0
     static var playing = false
-    
+    static var gameViewController: GameViewController? = nil
+    static var monsterViewController: MonsterViewController? = nil
 }

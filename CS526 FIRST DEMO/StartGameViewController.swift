@@ -29,6 +29,26 @@ class StartGameViewController: UIViewController {
         };
     }
 
-
+    @IBAction func scoreMode(sender: UIButton) {
+        if DataStruct.gameViewController != nil{
+            self.presentViewController(DataStruct.gameViewController!, animated: true, completion: nil
+            )
+        }else{
+            DataStruct.gameViewController =  self.storyboard?.instantiateViewControllerWithIdentifier("gameView") as! GameViewController
+            self.presentViewController(DataStruct.gameViewController!, animated: true, completion: nil
+            )
+        }
+    }
+    
+    @IBAction func bossMode(sender: UIButton) {
+        if DataStruct.monsterViewController != nil{
+            self.presentViewController(DataStruct.monsterViewController!, animated: true, completion: nil
+            )
+        }else{
+            DataStruct.monsterViewController =  self.storyboard?.instantiateViewControllerWithIdentifier("monsterView") as! MonsterViewController
+            self.presentViewController(DataStruct.monsterViewController!, animated: true, completion: nil
+            )
+        }
+    }
     
 }

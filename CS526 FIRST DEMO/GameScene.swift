@@ -135,7 +135,13 @@ class GameScene: SKScene {
         }
         
         gameState = .GameRunning
-        maxAspectRatio = 16.0/9.0 // iPhone 5"
+        if(UIScreen.mainScreen().bounds.height < 500){
+            maxAspectRatio = 3/2
+        }else{
+            maxAspectRatio = 16.0/9.0
+
+        }
+         // iPhone 5"
         maxAspectRatioWidth = size.height / maxAspectRatio
         playableMargin = (size.width - maxAspectRatioWidth) / 2.0
         playableRect = CGRect(x: playableMargin, y: 0,
@@ -263,7 +269,7 @@ class GameScene: SKScene {
 
             lastUpdateTime = 0
         }else if(self.view?.paused == true && backButtom.containsPoint(touchLocation)){
-            viewcontroller.navigationController?.popToRootViewControllerAnimated(true)
+            viewcontroller.viewDidDisappear(true)
             
         }else if(self.view?.paused == true && reGameButton.containsPoint(touchLocation)){
             viewcontroller.loadGame()

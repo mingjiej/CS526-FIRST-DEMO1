@@ -25,15 +25,24 @@ class MonsterViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func viewWillAppear(animated: Bool) {
+        loadGame()
+    }
     func loadGame(){
-        let scene = MonsterGameScene(size: CGSize(width: 750, height: 1134), num: monsterIndex)// Configure the view.
+        var scene = MonsterGameScene(size: CGSize(width: 750, height: 1134), num: monsterIndex)// Configure the view.
+        scene.scaleMode = .AspectFill
+
+        if(UIScreen.mainScreen().bounds.height < 500){
+            print("true")
+            scene = MonsterGameScene(size: CGSize(width: 640, height: 960), num: monsterIndex)
+            scene.scaleMode = .Fill
+        }
         scene.beforeViewController = self
+
         let skView = self.view as! SKView
         //        skView.showsFPS = true
         //        skView.showsNodeCount  = true
         skView.ignoresSiblingOrder = true
-        scene.scaleMode = .AspectFill
         skView.presentScene(scene)
     }
     
@@ -43,10 +52,10 @@ class MonsterViewController: UIViewController {
     }
     override func viewDidDisappear(animated: Bool) {
         let skView = self.view as! SKView
-        skView.presentScene(nil)
         stopBackGroundMusic()
-
-        
+//        self.navigationController?.popToRootViewControllerAnimated(true)
+        self.dismissViewControllerAnimated(true, completion: {skView.presentScene(nil)
+        })
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

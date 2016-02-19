@@ -148,7 +148,12 @@ class MonsterGameScene: SKScene {
         
         animation = SKAction.animateWithTextures(texture, timePerFrame: 0.05)
         gameState = .GameRunning
-        maxAspectRatio = 16.0/9.0 // iPhone 5"
+        if(UIScreen.mainScreen().bounds.height < 500){
+            maxAspectRatio = 3/2
+        }else{
+            maxAspectRatio = 16.0/9.0
+            
+        }
         maxAspectRatioWidth = size.height / maxAspectRatio
         playableMargin = (size.width - maxAspectRatioWidth) / 2.0
         playableRect = CGRect(x: playableMargin, y: 0,
@@ -315,8 +320,8 @@ class MonsterGameScene: SKScene {
             
             lastUpdateTime = 0
         }else if(self.view?.paused == true && backButtom.containsPoint(touchLocation)){
-            beforeViewController.navigationController?.popToRootViewControllerAnimated(true)
             
+                beforeViewController.viewDidDisappear(true)
         }else if(self.view?.paused == true && reGameButton.containsPoint(touchLocation)){
             beforeViewController.loadGame()
         }
@@ -502,7 +507,7 @@ class MonsterGameScene: SKScene {
         SetUpCollectionColor()
         setupSkill(level)
         addChild(monster1)
-        monster1.position = CGPoint(x: size.width/2, y: size.height/2+350)
+        monster1.position = CGPoint(x: size.width/2, y: size.height - 200)
         monster1.zPosition = 200
     }
     // set up the colloction set, initailize the layer's nodes, and collectSet

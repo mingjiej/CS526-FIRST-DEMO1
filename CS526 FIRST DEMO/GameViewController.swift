@@ -12,6 +12,9 @@ import SpriteKit
 class GameViewController: UIViewController {
     var totalscore = String()
     var index = Int(0)
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadGame()        
@@ -21,19 +24,30 @@ class GameViewController: UIViewController {
     }
     override func viewDidDisappear(animated: Bool) {
         let skView = self.view as! SKView
-        skView.presentScene(nil)
         stopBackGroundMusic()
+        self.dismissViewControllerAnimated(true, completion: {
+            skView.presentScene(nil)
+        })
 
+    }
+    override func viewWillAppear(animated: Bool) {
+        loadGame()
     }
     
     func loadGame(){
-        let scene = GameScene(size: CGSize(width: 750, height: 1134) , gvcontroller: self)// Configure the view.
+        var scene = GameScene(size: CGSize(width: 750, height: 1134) , gvcontroller: self)// Configure the view.
+        scene.scaleMode = .AspectFill
+
+        if(UIScreen.mainScreen().bounds.height < 500){
+            print("true")
+            scene = GameScene(size: CGSize(width: 640, height: 960) , gvcontroller: self)
+            scene.scaleMode = .Fill
+        }
         scene.viewcontroller = self
         let skView = self.view as! SKView
         //        skView.showsFPS = true
         //        skView.showsNodeCount = true
         skView.ignoresSiblingOrder = true
-        scene.scaleMode = .AspectFill
         skView.presentScene(scene)
     }
     

@@ -53,9 +53,9 @@ class MonsterViewController: UIViewController {
     override func viewDidDisappear(animated: Bool) {
         let skView = self.view as! SKView
         stopBackGroundMusic()
-//        self.navigationController?.popToRootViewControllerAnimated(true)
-        self.dismissViewControllerAnimated(true, completion: {skView.presentScene(nil)
-        })
+        skView.presentScene(nil)
+//        self.dismissViewControllerAnimated(true, completion: {skView.presentScene(nil)
+//        })
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

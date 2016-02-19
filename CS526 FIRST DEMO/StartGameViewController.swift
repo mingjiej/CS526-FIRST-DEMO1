@@ -31,23 +31,26 @@ class StartGameViewController: UIViewController {
 
     @IBAction func scoreMode(sender: UIButton) {
         if DataStruct.gameViewController != nil{
-            self.presentViewController(DataStruct.gameViewController!, animated: true, completion: nil
-            )
+            self.navigationController?.pushViewController(DataStruct.gameViewController!, animated: true)
+            
         }else{
             DataStruct.gameViewController =  self.storyboard?.instantiateViewControllerWithIdentifier("gameView") as! GameViewController
-            self.presentViewController(DataStruct.gameViewController!, animated: true, completion: nil
-            )
+            self.navigationController?.pushViewController(DataStruct.gameViewController!, animated: true)
         }
     }
     
     @IBAction func bossMode(sender: UIButton) {
         if DataStruct.monsterViewController != nil{
-            self.presentViewController(DataStruct.monsterViewController!, animated: true, completion: nil
-            )
+//            self.presentViewController(DataStruct.monsterViewController!, animated: true, completion: nil
+//            )
+            self.navigationController?.pushViewController(DataStruct.monsterViewController!, animated: true)
+        
         }else{
             DataStruct.monsterViewController =  self.storyboard?.instantiateViewControllerWithIdentifier("monsterView") as! MonsterViewController
-            self.presentViewController(DataStruct.monsterViewController!, animated: true, completion: nil
-            )
+            
+            self.navigationController?.pushViewController(DataStruct.monsterViewController!, animated: true)
+//            self.presentViewController(DataStruct.monsterViewController!, animated: true, completion: nil
+//            )
         }
     }
     

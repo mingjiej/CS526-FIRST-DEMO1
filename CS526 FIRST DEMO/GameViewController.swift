@@ -25,9 +25,8 @@ class GameViewController: UIViewController {
     override func viewDidDisappear(animated: Bool) {
         let skView = self.view as! SKView
         stopBackGroundMusic()
-        self.dismissViewControllerAnimated(true, completion: {
-            skView.presentScene(nil)
-        })
+        skView.presentScene(nil)
+
 
     }
     override func viewWillAppear(animated: Bool) {

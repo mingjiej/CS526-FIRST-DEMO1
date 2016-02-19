@@ -321,7 +321,8 @@ class MonsterGameScene: SKScene {
             lastUpdateTime = 0
         }else if(self.view?.paused == true && backButtom.containsPoint(touchLocation)){
             
-                beforeViewController.viewDidDisappear(true)
+            beforeViewController.navigationController?.popToRootViewControllerAnimated(true)
+
         }else if(self.view?.paused == true && reGameButton.containsPoint(touchLocation)){
             beforeViewController.loadGame()
         }

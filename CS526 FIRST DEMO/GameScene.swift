@@ -269,7 +269,7 @@ class GameScene: SKScene {
 
             lastUpdateTime = 0
         }else if(self.view?.paused == true && backButtom.containsPoint(touchLocation)){
-            viewcontroller.viewDidDisappear(true)
+            viewcontroller.navigationController?.popToRootViewControllerAnimated(true)
             
         }else if(self.view?.paused == true && reGameButton.containsPoint(touchLocation)){
             viewcontroller.loadGame()

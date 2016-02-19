@@ -58,9 +58,9 @@ class GameOverScene: SKScene {
         if(backButtom.containsPoint(touchLocation)){
             self.viewcontroller.dismissViewControllerAnimated(false, completion: nil)
             if(beforeViewController != nil){
-                self.beforeViewController!.viewDidDisappear(true)
+                self.beforeViewController!.navigationController?.popToRootViewControllerAnimated(true)
             }else{
-                self.beforeViewControllerB!.viewDidDisappear(true)
+                self.beforeViewControllerB!.navigationController?.popToRootViewControllerAnimated(true)
 
             }
             

@@ -23,7 +23,7 @@ If you happend to try out this app and found bugs or had any advise, **PLEASE** 
 ```
 $ git clone https://github.com/jjdddn1/SWIFT_TripleBubble.git
 $ cd SWIFT_TripleBubble
-$ open CS526 FIRST DEMO.xcodeproj
+$ open "CS526 FIRST DEMO.xcodeproj"
 ```
 
 OR

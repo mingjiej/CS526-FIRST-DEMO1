@@ -8,8 +8,8 @@ If you happend to try out this app and found bugs or had any advise, **PLEASE** 
 ## Screenshot
 > The pics maybe outdated cuz I kept updating the app (but too lazy to update the pics 😄)
 
-![image](https://github.com/jjdddn1/SWIFT_TripleBubble/blob/master/screenshot/0.gif)
-![image](https://github.com/jjdddn1/SWIFT_TripleBubble/blob/master/screenshot/1.gif)
+![image](https://github.com/mingjiej/CS526-FIRST-DEMO1/blob/Ren/screenshot/0.gif)
+![image](https://github.com/mingjiej/CS526-FIRST-DEMO1/blob/Ren/screenshot/1.gif)
 
 
 ## Features

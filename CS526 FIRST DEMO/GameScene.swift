@@ -325,8 +325,8 @@ class GameScene: SKScene {
         
         
         pauseButton.zPosition = 100
-        pauseButton.position = CGPoint(x: size.width/2, y: 50)
         pauseButton.size = CGSizeMake(80,80)
+        pauseButton.position = CGPoint(x: playableMargin + pauseButton.size.width/2, y: 970)
         
         backButtom.zPosition = 60
         backButtom.position = CGPointMake(size.width / 2 + 150, size.height / 2 )

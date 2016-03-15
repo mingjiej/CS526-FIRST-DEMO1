@@ -376,6 +376,9 @@ class SettingView:UIViewController, MFMessageComposeViewControllerDelegate, MFMa
             
         })
     }
+    @IBAction func SwapeFromEdge(sender: UIScreenEdgePanGestureRecognizer) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showAbout"{

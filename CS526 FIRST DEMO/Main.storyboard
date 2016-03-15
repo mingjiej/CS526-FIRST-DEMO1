@@ -277,7 +277,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="game version: V 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7f-Md-KnP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="game version: V 1.0.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7f-Md-KnP">
                                 <rect key="frame" x="12" y="129" width="296" height="39"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -563,6 +563,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="I2i-gG-7bi" firstAttribute="top" secondItem="f6V-td-BgB" secondAttribute="bottom" constant="8" id="19c-sI-gRE"/>
                             <constraint firstItem="vap-b7-bNO" firstAttribute="leading" secondItem="kLZ-Uf-rzJ" secondAttribute="leading" id="327-DI-mCQ"/>
@@ -605,6 +606,9 @@
                                 <exclude reference="a8F-ML-B2g"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="13D-kF-nFK" appends="YES" id="VWN-PK-EPL"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="7e3-hh-VDf"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -626,6 +630,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j04-LP-SDH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="13D-kF-nFK">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="SwapeFromEdge:" destination="eXp-E1-0u8" id="Cev-d6-gbb"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="785" y="1193"/>
         </scene>

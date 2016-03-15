@@ -101,7 +101,7 @@ class MonsterGameScene: SKScene {
     var LifebarSize = CGFloat(0)
     var monsterbarSize = CGFloat(0)
     var collectSetPosition = [CGPoint]()
-    let pauseButton = SKSpriteNode(imageNamed: "Return.png")
+    let pauseButton = SKSpriteNode(imageNamed: "Pause.png")
     
     
     var mapUIColor: [String] = ["collection-blue.png", "collection-yellow.png", "collection-red.png", "collection-violet.png", "collection-green.png", "collection-grey.png"]
@@ -135,12 +135,14 @@ class MonsterGameScene: SKScene {
         case DataStruct.EASY:
             monsterAttackChance = 15
             monsterAttackFallSpeed = 2.5
+            gemFallSpeed = 2.2
         case DataStruct.MEDIUM:
             monsterAttackChance = 11
             monsterAttackFallSpeed = 2.0
         case DataStruct.HARD:
             monsterAttackChance = 7
             monsterAttackFallSpeed = 1.5
+            gemFallSpeed = 1.8
             
         default:
             break
@@ -357,7 +359,9 @@ class MonsterGameScene: SKScene {
         
         UIlayerNode.addChild(pauseButton)
         pauseButton.zPosition = 200
-        pauseButton.position = CGPoint(x: playableMargin + pauseButton.size.width/2, y: 990)
+        pauseButton.size = CGSizeMake(80,80)
+        pauseButton.position = CGPoint(x: playableMargin + pauseButton.size.width/2, y: 970)
+
         
         backButtom.zPosition = 60
         backButtom.position = CGPointMake(size.width / 2 + 150, size.height / 2 )
